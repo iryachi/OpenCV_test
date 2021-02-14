@@ -35,6 +35,7 @@ namespace OpenCV_test
             this.tabPageCvtColor = new System.Windows.Forms.TabPage();
             this.tabPageSobel = new System.Windows.Forms.TabPage();
             this.tabPageImwrite = new System.Windows.Forms.TabPage();
+            this.tabPageCanny = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +46,7 @@ namespace OpenCV_test
             this.tabControl1.Controls.Add(this.tabPageCvtColor);
             this.tabControl1.Controls.Add(this.tabPageSobel);
             this.tabControl1.Controls.Add(this.tabPageImwrite);
+            this.tabControl1.Controls.Add(this.tabPageCanny);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -99,6 +101,15 @@ namespace OpenCV_test
             this.tabPageImwrite.Text = "Imwrite";
             this.tabPageImwrite.UseVisualStyleBackColor = true;
             // 
+            // tabPageCanny
+            // 
+            this.tabPageCanny.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCanny.Name = "tabPageCanny";
+            this.tabPageCanny.Size = new System.Drawing.Size(570, 393);
+            this.tabPageCanny.TabIndex = 5;
+            this.tabPageCanny.Text = "Canny";
+            this.tabPageCanny.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -122,6 +133,7 @@ namespace OpenCV_test
         private System.Windows.Forms.TabPage tabPageCvtColor;
         private System.Windows.Forms.TabPage tabPageSobel;
         private System.Windows.Forms.TabPage tabPageImwrite;
+        private System.Windows.Forms.TabPage tabPageCanny;
     }
 }
 

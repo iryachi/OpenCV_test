@@ -68,6 +68,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CannyCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CannyCtrl.Designer.cs">
+      <DependentUpon>CannyCtrl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CvtColorCtrl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     <Compile Include="ThresholdCtrl.Designer.cs">
       <DependentUpon>ThresholdCtrl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CannyCtrl.resx">
+      <DependentUpon>CannyCtrl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CvtColorCtrl.resx">
       <DependentUpon>CvtColorCtrl.cs</DependentUpon>
     </EmbeddedResource>

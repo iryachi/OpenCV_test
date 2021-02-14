@@ -22,7 +22,8 @@ namespace OpenCV_test
             tabControl1.TabPages["tabPageCvtColor"].Controls.Add(new CvtColorCtrl());
             tabControl1.TabPages["tabPageSobel"].Controls.Add(new SobelCtrl());
             tabControl1.TabPages["tabPageImwrite"].Controls.Add(new ImwriteCtrl());
-        }
+              tabControl1.TabPages["tabPageCanny"].Controls.Add(new CannyCtrl());
+      }
 
         private void Form1_Load(object sender, EventArgs e)
         {

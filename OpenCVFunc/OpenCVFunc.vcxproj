@@ -126,6 +126,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Canny.h" />
     <ClInclude Include="CvtColor.h" />
     <ClInclude Include="ImageMemManager.h" />
     <ClInclude Include="Imread.h" />
@@ -138,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="Canny.cpp" />
     <ClCompile Include="CvtColor.cpp" />
     <ClCompile Include="ImageMemManager.cpp" />
     <ClCompile Include="Imread.cpp" />
