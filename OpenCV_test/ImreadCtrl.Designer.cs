@@ -57,7 +57,7 @@ namespace OpenCV_test
             // 
             // numericUpDownOutNo
             // 
-            this.numericUpDownOutNo.Location = new System.Drawing.Point(231, 3);
+            this.numericUpDownOutNo.Location = new System.Drawing.Point(295, 0);
             this.numericUpDownOutNo.Maximum = new decimal(new int[] {
             9,
             0,
@@ -70,7 +70,7 @@ namespace OpenCV_test
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(166, 5);
+            this.label1.Location = new System.Drawing.Point(230, 2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 12);
             this.label1.TabIndex = 2;
