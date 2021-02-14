@@ -23,11 +23,9 @@ namespace OpenCVFunc {
 			for each (int var in flags)
 			{
 				compression_params.push_back(var);
-			}
-			
+			}			
 
 			cv::imwrite(s, *inImage, compression_params	);
-
 
 			String^ nl = System::Environment::NewLine;
 			String^ retStr = "image param" + nl;
