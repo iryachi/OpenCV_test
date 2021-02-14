@@ -1,5 +1,5 @@
 ﻿
-namespace OpemCV_test
+namespace OpenCV_test
 {
     partial class ImreadCtrl
     {

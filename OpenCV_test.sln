@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpemCV_test", "OpemCV_test\OpemCV_test.csproj", "{2E47A59D-779B-48CA-A644-61A279CF1011}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenCVFunc", "OpenCVFunc\OpenCVFunc.vcxproj", "{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCV_test", "OpenCV_test\OpenCV_test.csproj", "{2E47A59D-779B-48CA-A644-61A279CF1011}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +17,16 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Debug|x64.ActiveCfg = Debug|x64
+		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Debug|x64.Build.0 = Debug|x64
+		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Debug|x86.ActiveCfg = Debug|Win32
+		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Debug|x86.Build.0 = Debug|Win32
+		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Release|Any CPU.ActiveCfg = Release|Win32
+		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Release|x64.ActiveCfg = Release|x64
+		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Release|x64.Build.0 = Release|x64
+		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Release|x86.ActiveCfg = Release|Win32
+		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Release|x86.Build.0 = Release|Win32
 		{2E47A59D-779B-48CA-A644-61A279CF1011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2E47A59D-779B-48CA-A644-61A279CF1011}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E47A59D-779B-48CA-A644-61A279CF1011}.Debug|x64.ActiveCfg = Debug|x64
@@ -29,16 +39,6 @@ Global
 		{2E47A59D-779B-48CA-A644-61A279CF1011}.Release|x64.Build.0 = Release|x64
 		{2E47A59D-779B-48CA-A644-61A279CF1011}.Release|x86.ActiveCfg = Release|Any CPU
 		{2E47A59D-779B-48CA-A644-61A279CF1011}.Release|x86.Build.0 = Release|Any CPU
-		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Debug|x64.ActiveCfg = Debug|x64
-		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Debug|x64.Build.0 = Debug|x64
-		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Debug|x86.ActiveCfg = Debug|Win32
-		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Debug|x86.Build.0 = Debug|Win32
-		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Release|Any CPU.ActiveCfg = Release|Win32
-		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Release|x64.ActiveCfg = Release|x64
-		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Release|x64.Build.0 = Release|x64
-		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Release|x86.ActiveCfg = Release|Win32
-		{2DB9884A-CE18-4EB0-8744-E1C62B1383D0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
