@@ -47,7 +47,7 @@ namespace OpenCV_test
             // 
             // buttonOpen
             // 
-            this.buttonOpen.Location = new System.Drawing.Point(295, 108);
+            this.buttonOpen.Location = new System.Drawing.Point(308, 106);
             this.buttonOpen.Name = "buttonOpen";
             this.buttonOpen.Size = new System.Drawing.Size(75, 23);
             this.buttonOpen.TabIndex = 0;
