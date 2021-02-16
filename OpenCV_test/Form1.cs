@@ -23,6 +23,7 @@ namespace OpenCV_test
             tabControl1.TabPages["tabPageSobel"].Controls.Add(new SobelCtrl());
             tabControl1.TabPages["tabPageImwrite"].Controls.Add(new ImwriteCtrl());
               tabControl1.TabPages["tabPageCanny"].Controls.Add(new CannyCtrl());
+              tabControl1.TabPages["tabPageLaplacian"].Controls.Add(new LaplacianCtrl());
       }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,6 +34,12 @@ namespace OpenCV_test
         private void Form1_FontChanged(object sender, EventArgs e)
         {
             OpenCVFunc.ImageMemManager.Close();
+        }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            AboutDialog dlg = new AboutDialog();
+            dlg.ShowDialog();
         }
     }
 }

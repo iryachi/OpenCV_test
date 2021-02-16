@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace OpenCV_test
 {
-    public partial class SobelCtrl : UserControl
+    public partial class LaplacianCtrl : UserControl
     {
-            OpenCVFunc.Sobel sobel = new OpenCVFunc.Sobel();
-        public SobelCtrl()
+        OpenCVFunc.Laplacian laplacian = null;
+        public LaplacianCtrl()
         {
             InitializeComponent();
+
 
             KeyValuePair<int, string>[] kv = new KeyValuePair<int, string>[]
             {
@@ -30,13 +31,14 @@ namespace OpenCV_test
             this.comboBoxDDepth.ValueMember = "Key";
             this.comboBoxDDepth.SelectedIndex = 2;
 
+
             KeyValuePair<int, string>[] ksize = new KeyValuePair<int, string>[]
-            {
+     {
                 new KeyValuePair<int,string>(1, "1" ),
                 new KeyValuePair<int,string>(3, "3" ),
                 new KeyValuePair<int,string>(5, "5" ),
                 new KeyValuePair<int,string>(7, "7 " ),
-            };
+     };
 
             this.comboBoxKsize.DataSource = ksize;
             this.comboBoxKsize.DisplayMember = "Value";
@@ -59,20 +61,18 @@ namespace OpenCV_test
             this.comboBoxBorderType.DisplayMember = "Value";
             this.comboBoxBorderType.ValueMember = "Key";
             this.comboBoxBorderType.SelectedIndex = 3;
-
         }
 
         private void buttonExec_Click(object sender, EventArgs e)
         {
             try
             {
-
+                if (laplacian == null)
+                    laplacian = new OpenCVFunc.Laplacian();
 
                 double scale = double.Parse(textBoxSacale.Text);
                 double delta = double.Parse(textBoxDelta.Text);
 
-                int dx = (int)numericUpDownDx.Value;
-                int dy = (int)numericUpDownDy.Value;
                 int ddepth = (int)comboBoxDDepth.SelectedValue;
                 int ksize = (int)comboBoxKsize.SelectedValue;
                 int borderType = (int)comboBoxBorderType.SelectedValue;
@@ -80,15 +80,13 @@ namespace OpenCV_test
                 int inputNo = (int)numericUpDownInputNo.Value;
                 int outputNo = (int)numericUpDownOutNo.Value;
 
-
-                String retStr = sobel.Sobel_exec(ddepth, dx, dy, ksize, scale, delta, borderType, inputNo, outputNo);
+                String retStr = laplacian.Laplacian_exec(ddepth, ksize, scale, delta, borderType, inputNo, outputNo);
                 textBoxParameter.Text = retStr;
             }
             catch (Exception exp)
             {
                 MessageBox.Show(exp.Message);
             }
-
         }
     }
 }

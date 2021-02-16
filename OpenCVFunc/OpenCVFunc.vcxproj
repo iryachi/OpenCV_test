@@ -131,6 +131,7 @@
     <ClInclude Include="ImageMemManager.h" />
     <ClInclude Include="Imread.h" />
     <ClInclude Include="Imwrite.h" />
+    <ClInclude Include="Laplacian.h" />
     <ClInclude Include="Sobel.h" />
     <ClInclude Include="Threshold.h" />
     <ClInclude Include="pch.h" />
@@ -144,6 +145,7 @@
     <ClCompile Include="ImageMemManager.cpp" />
     <ClCompile Include="Imread.cpp" />
     <ClCompile Include="Imwrite.cpp" />
+    <ClCompile Include="Laplacian.cpp" />
     <ClCompile Include="Sobel.cpp" />
     <ClCompile Include="Threshold.cpp" />
     <ClCompile Include="pch.cpp">
