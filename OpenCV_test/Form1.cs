@@ -17,14 +17,13 @@ namespace OpenCV_test
 
             InitializeComponent();
 
-            tabControl1.TabPages["tabPageImread"].Controls.Add(new ImreadCtrl());
-            tabControl1.TabPages["tabPageThreshold"].Controls.Add(new ThresholdCtrl());
-            tabControl1.TabPages["tabPageCvtColor"].Controls.Add(new CvtColorCtrl());
-            tabControl1.TabPages["tabPageSobel"].Controls.Add(new SobelCtrl());
-            tabControl1.TabPages["tabPageImwrite"].Controls.Add(new ImwriteCtrl());
-              tabControl1.TabPages["tabPageCanny"].Controls.Add(new CannyCtrl());
-              tabControl1.TabPages["tabPageLaplacian"].Controls.Add(new LaplacianCtrl());
-      }
+            //デザイナがうまく動かないので　手動コードで入力
+            tabControl1.TabPages["tabPageImageFile"].Controls.Add(new ImageFileTab() { Dock = DockStyle.Fill });
+            tabControl1.TabPages["tabPageConverter"].Controls.Add(new ConverterTab() { Dock = DockStyle.Fill });
+            tabControl1.TabPages["tabPageEdge"].Controls.Add(new EdgeDitectionTab() { Dock = DockStyle.Fill });
+            tabControl1.TabPages["tabPageFilter2D"].Controls.Add(new Filter2DCtrl() { Dock = DockStyle.Fill });
+            tabControl1.TabPages["tabPageConvTest"].Controls.Add(new ConvolutionTestCtrl() { Dock = DockStyle.Fill });
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {

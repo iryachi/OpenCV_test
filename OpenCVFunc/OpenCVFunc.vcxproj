@@ -126,8 +126,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BitDepthConverter.h" />
     <ClInclude Include="Canny.h" />
     <ClInclude Include="CvtColor.h" />
+    <ClInclude Include="Filter2D.h" />
     <ClInclude Include="ImageMemManager.h" />
     <ClInclude Include="Imread.h" />
     <ClInclude Include="Imwrite.h" />
@@ -140,8 +142,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="BitDepthConverter.cpp" />
     <ClCompile Include="Canny.cpp" />
     <ClCompile Include="CvtColor.cpp" />
+    <ClCompile Include="Filter2D.cpp" />
     <ClCompile Include="ImageMemManager.cpp" />
     <ClCompile Include="Imread.cpp" />
     <ClCompile Include="Imwrite.cpp" />

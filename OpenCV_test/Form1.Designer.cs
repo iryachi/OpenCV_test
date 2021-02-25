@@ -30,92 +30,84 @@ namespace OpenCV_test
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPageImread = new System.Windows.Forms.TabPage();
-            this.tabPageThreshold = new System.Windows.Forms.TabPage();
-            this.tabPageCvtColor = new System.Windows.Forms.TabPage();
-            this.tabPageSobel = new System.Windows.Forms.TabPage();
-            this.tabPageImwrite = new System.Windows.Forms.TabPage();
-            this.tabPageCanny = new System.Windows.Forms.TabPage();
+            this.tabPageImageFile = new System.Windows.Forms.TabPage();
+            this.tabPageConverter = new System.Windows.Forms.TabPage();
+            this.tabPageDenoising = new System.Windows.Forms.TabPage();
+            this.tabPageEdge = new System.Windows.Forms.TabPage();
+            this.tabPageFilter2D = new System.Windows.Forms.TabPage();
             this.btnAbout = new System.Windows.Forms.Button();
-            this.tabPageLaplacian = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tabPageConvTest = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPageImread);
-            this.tabControl1.Controls.Add(this.tabPageThreshold);
-            this.tabControl1.Controls.Add(this.tabPageCvtColor);
-            this.tabControl1.Controls.Add(this.tabPageSobel);
-            this.tabControl1.Controls.Add(this.tabPageImwrite);
-            this.tabControl1.Controls.Add(this.tabPageCanny);
-            this.tabControl1.Controls.Add(this.tabPageLaplacian);
-            this.tabControl1.Location = new System.Drawing.Point(12, 30);
+            this.tabControl1.Controls.Add(this.tabPageImageFile);
+            this.tabControl1.Controls.Add(this.tabPageConverter);
+            this.tabControl1.Controls.Add(this.tabPageDenoising);
+            this.tabControl1.Controls.Add(this.tabPageEdge);
+            this.tabControl1.Controls.Add(this.tabPageFilter2D);
+            this.tabControl1.Controls.Add(this.tabPageConvTest);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(578, 401);
+            this.tabControl1.Size = new System.Drawing.Size(602, 415);
             this.tabControl1.TabIndex = 1;
             // 
-            // tabPageImread
+            // tabPageImageFile
             // 
-            this.tabPageImread.Location = new System.Drawing.Point(4, 22);
-            this.tabPageImread.Name = "tabPageImread";
-            this.tabPageImread.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageImread.Size = new System.Drawing.Size(570, 375);
-            this.tabPageImread.TabIndex = 1;
-            this.tabPageImread.Text = "imread";
-            this.tabPageImread.UseVisualStyleBackColor = true;
+            this.tabPageImageFile.Location = new System.Drawing.Point(4, 22);
+            this.tabPageImageFile.Name = "tabPageImageFile";
+            this.tabPageImageFile.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageImageFile.Size = new System.Drawing.Size(594, 389);
+            this.tabPageImageFile.TabIndex = 1;
+            this.tabPageImageFile.Text = "File";
+            this.tabPageImageFile.UseVisualStyleBackColor = true;
             // 
-            // tabPageThreshold
+            // tabPageConverter
             // 
-            this.tabPageThreshold.Location = new System.Drawing.Point(4, 22);
-            this.tabPageThreshold.Name = "tabPageThreshold";
-            this.tabPageThreshold.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageThreshold.Size = new System.Drawing.Size(570, 375);
-            this.tabPageThreshold.TabIndex = 0;
-            this.tabPageThreshold.Text = "threshold";
-            this.tabPageThreshold.UseVisualStyleBackColor = true;
+            this.tabPageConverter.Location = new System.Drawing.Point(4, 22);
+            this.tabPageConverter.Name = "tabPageConverter";
+            this.tabPageConverter.Size = new System.Drawing.Size(594, 389);
+            this.tabPageConverter.TabIndex = 2;
+            this.tabPageConverter.Text = "Converter";
+            this.tabPageConverter.UseVisualStyleBackColor = true;
             // 
-            // tabPageCvtColor
+            // tabPageDenoising
             // 
-            this.tabPageCvtColor.Location = new System.Drawing.Point(4, 22);
-            this.tabPageCvtColor.Name = "tabPageCvtColor";
-            this.tabPageCvtColor.Size = new System.Drawing.Size(570, 375);
-            this.tabPageCvtColor.TabIndex = 2;
-            this.tabPageCvtColor.Text = "CvtColor";
-            this.tabPageCvtColor.UseVisualStyleBackColor = true;
+            this.tabPageDenoising.Location = new System.Drawing.Point(4, 22);
+            this.tabPageDenoising.Name = "tabPageDenoising";
+            this.tabPageDenoising.Size = new System.Drawing.Size(594, 389);
+            this.tabPageDenoising.TabIndex = 8;
+            this.tabPageDenoising.Text = "Denoising";
+            this.tabPageDenoising.UseVisualStyleBackColor = true;
             // 
-            // tabPageSobel
+            // tabPageEdge
             // 
-            this.tabPageSobel.Location = new System.Drawing.Point(4, 22);
-            this.tabPageSobel.Name = "tabPageSobel";
-            this.tabPageSobel.Size = new System.Drawing.Size(570, 375);
-            this.tabPageSobel.TabIndex = 3;
-            this.tabPageSobel.Text = "Sobel";
-            this.tabPageSobel.UseVisualStyleBackColor = true;
+            this.tabPageEdge.Location = new System.Drawing.Point(4, 22);
+            this.tabPageEdge.Name = "tabPageEdge";
+            this.tabPageEdge.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageEdge.Size = new System.Drawing.Size(594, 389);
+            this.tabPageEdge.TabIndex = 0;
+            this.tabPageEdge.Text = "Edge";
+            this.tabPageEdge.UseVisualStyleBackColor = true;
             // 
-            // tabPageImwrite
+            // tabPageFilter2D
             // 
-            this.tabPageImwrite.Location = new System.Drawing.Point(4, 22);
-            this.tabPageImwrite.Name = "tabPageImwrite";
-            this.tabPageImwrite.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageImwrite.Size = new System.Drawing.Size(570, 375);
-            this.tabPageImwrite.TabIndex = 4;
-            this.tabPageImwrite.Text = "Imwrite";
-            this.tabPageImwrite.UseVisualStyleBackColor = true;
-            // 
-            // tabPageCanny
-            // 
-            this.tabPageCanny.Location = new System.Drawing.Point(4, 22);
-            this.tabPageCanny.Name = "tabPageCanny";
-            this.tabPageCanny.Size = new System.Drawing.Size(570, 375);
-            this.tabPageCanny.TabIndex = 5;
-            this.tabPageCanny.Text = "Canny";
-            this.tabPageCanny.UseVisualStyleBackColor = true;
+            this.tabPageFilter2D.Location = new System.Drawing.Point(4, 22);
+            this.tabPageFilter2D.Name = "tabPageFilter2D";
+            this.tabPageFilter2D.Size = new System.Drawing.Size(594, 389);
+            this.tabPageFilter2D.TabIndex = 7;
+            this.tabPageFilter2D.Text = "Filter2D";
+            this.tabPageFilter2D.UseVisualStyleBackColor = true;
             // 
             // btnAbout
             // 
-            this.btnAbout.Location = new System.Drawing.Point(515, 1);
+            this.btnAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAbout.Location = new System.Drawing.Point(515, 3);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(75, 23);
             this.btnAbout.TabIndex = 0;
@@ -123,27 +115,38 @@ namespace OpenCV_test
             this.btnAbout.UseVisualStyleBackColor = true;
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
-            // tabPageLaplacian
+            // panel1
             // 
-            this.tabPageLaplacian.Location = new System.Drawing.Point(4, 22);
-            this.tabPageLaplacian.Name = "tabPageLaplacian";
-            this.tabPageLaplacian.Size = new System.Drawing.Size(570, 375);
-            this.tabPageLaplacian.TabIndex = 6;
-            this.tabPageLaplacian.Text = "Laplacian";
-            this.tabPageLaplacian.UseVisualStyleBackColor = true;
+            this.panel1.Controls.Add(this.btnAbout);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(602, 28);
+            this.panel1.TabIndex = 2;
+            // 
+            // tabPageConvTest
+            // 
+            this.tabPageConvTest.Location = new System.Drawing.Point(4, 22);
+            this.tabPageConvTest.Name = "tabPageConvTest";
+            this.tabPageConvTest.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageConvTest.Size = new System.Drawing.Size(594, 389);
+            this.tabPageConvTest.TabIndex = 9;
+            this.tabPageConvTest.Text = "Convolution Test";
+            this.tabPageConvTest.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 443);
-            this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.FontChanged += new System.EventHandler(this.Form1_FontChanged);
             this.tabControl1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -151,14 +154,14 @@ namespace OpenCV_test
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPageImread;
-        private System.Windows.Forms.TabPage tabPageThreshold;
-        private System.Windows.Forms.TabPage tabPageCvtColor;
-        private System.Windows.Forms.TabPage tabPageSobel;
-        private System.Windows.Forms.TabPage tabPageImwrite;
-        private System.Windows.Forms.TabPage tabPageCanny;
+        private System.Windows.Forms.TabPage tabPageImageFile;
+        private System.Windows.Forms.TabPage tabPageEdge;
+        private System.Windows.Forms.TabPage tabPageConverter;
         private System.Windows.Forms.Button btnAbout;
-        private System.Windows.Forms.TabPage tabPageLaplacian;
+        private System.Windows.Forms.TabPage tabPageFilter2D;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TabPage tabPageDenoising;
+        private System.Windows.Forms.TabPage tabPageConvTest;
     }
 }
 

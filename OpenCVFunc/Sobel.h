@@ -23,7 +23,6 @@ namespace OpenCVFunc {
 			int imageOutNo
 		)
 		{
-
 				cv::Mat* inImage = ImageMemManager::GetImage(imageInNo);
 				if (inImage == nullptr) { return "no input image"; }
 
