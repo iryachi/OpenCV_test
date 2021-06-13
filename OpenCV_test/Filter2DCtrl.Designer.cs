@@ -31,30 +31,23 @@ namespace OpenCV_test
         {
             this.textBoxParameter = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDownInputNo = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownOutNo = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxBorderType = new System.Windows.Forms.ComboBox();
-            this.comboBoxDDepth = new System.Windows.Forms.ComboBox();
             this.textBoxDelta = new System.Windows.Forms.TextBox();
             this.buttonExec = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonDelKernel = new System.Windows.Forms.Button();
             this.buttonAddKernel = new System.Windows.Forms.Button();
             this.numericUpDownAnchorY = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownAnchorX = new System.Windows.Forms.NumericUpDown();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownInputNo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOutNo)).BeginInit();
+            this.borderTypeCtrl1 = new OpenCV_test.Common.BorderTypeCtrl();
+            this.depthCtrl1 = new OpenCV_test.Common.DepthCtrl();
+            this.imageInOutCtrl1 = new OpenCV_test.Common.ImageInOutCtrl();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAnchorY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAnchorX)).BeginInit();
@@ -78,71 +71,6 @@ namespace OpenCV_test
             this.label6.TabIndex = 41;
             this.label6.Text = "Parameter";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 39);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 12);
-            this.label7.TabIndex = 36;
-            this.label7.Text = "ddepth";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 12);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Input No.";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(217, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 12);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "Output No.";
-            // 
-            // numericUpDownInputNo
-            // 
-            this.numericUpDownInputNo.Location = new System.Drawing.Point(82, 3);
-            this.numericUpDownInputNo.Maximum = new decimal(new int[] {
-            9,
-            0,
-            0,
-            0});
-            this.numericUpDownInputNo.Name = "numericUpDownInputNo";
-            this.numericUpDownInputNo.Size = new System.Drawing.Size(57, 19);
-            this.numericUpDownInputNo.TabIndex = 31;
-            // 
-            // numericUpDownOutNo
-            // 
-            this.numericUpDownOutNo.Location = new System.Drawing.Point(282, 3);
-            this.numericUpDownOutNo.Maximum = new decimal(new int[] {
-            9,
-            0,
-            0,
-            0});
-            this.numericUpDownOutNo.Name = "numericUpDownOutNo";
-            this.numericUpDownOutNo.Size = new System.Drawing.Size(57, 19);
-            this.numericUpDownOutNo.TabIndex = 34;
-            this.numericUpDownOutNo.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(299, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 12);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "borderType";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -160,22 +88,6 @@ namespace OpenCV_test
             this.label1.Size = new System.Drawing.Size(39, 12);
             this.label1.TabIndex = 30;
             this.label1.Text = "anchor";
-            // 
-            // comboBoxBorderType
-            // 
-            this.comboBoxBorderType.FormattingEnabled = true;
-            this.comboBoxBorderType.Location = new System.Drawing.Point(301, 97);
-            this.comboBoxBorderType.Name = "comboBoxBorderType";
-            this.comboBoxBorderType.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxBorderType.TabIndex = 26;
-            // 
-            // comboBoxDDepth
-            // 
-            this.comboBoxDDepth.FormattingEnabled = true;
-            this.comboBoxDDepth.Location = new System.Drawing.Point(13, 54);
-            this.comboBoxDDepth.Name = "comboBoxDDepth";
-            this.comboBoxDDepth.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxDDepth.TabIndex = 25;
             // 
             // textBoxDelta
             // 
@@ -227,6 +139,21 @@ namespace OpenCV_test
             this.dataGridView1.RowTemplate.Height = 21;
             this.dataGridView1.Size = new System.Drawing.Size(413, 145);
             this.dataGridView1.TabIndex = 43;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "1";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "2";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "3";
+            this.Column3.Name = "Column3";
             // 
             // buttonDelKernel
             // 
@@ -292,50 +219,49 @@ namespace OpenCV_test
             0,
             -2147483648});
             // 
-            // Column1
+            // borderTypeCtrl1
             // 
-            this.Column1.HeaderText = "1";
-            this.Column1.Name = "Column1";
+            this.borderTypeCtrl1.Location = new System.Drawing.Point(276, 42);
+            this.borderTypeCtrl1.Name = "borderTypeCtrl1";
+            this.borderTypeCtrl1.Size = new System.Drawing.Size(201, 37);
+            this.borderTypeCtrl1.TabIndex = 55;
             // 
-            // Column2
+            // depthCtrl1
             // 
-            this.Column2.HeaderText = "2";
-            this.Column2.Name = "Column2";
+            this.depthCtrl1.Location = new System.Drawing.Point(0, 41);
+            this.depthCtrl1.Name = "depthCtrl1";
+            this.depthCtrl1.Size = new System.Drawing.Size(201, 38);
+            this.depthCtrl1.TabIndex = 54;
             // 
-            // Column3
+            // imageInOutCtrl1
             // 
-            this.Column3.HeaderText = "3";
-            this.Column3.Name = "Column3";
+            this.imageInOutCtrl1.Location = new System.Drawing.Point(0, 0);
+            this.imageInOutCtrl1.Name = "imageInOutCtrl1";
+            this.imageInOutCtrl1.Size = new System.Drawing.Size(145, 35);
+            this.imageInOutCtrl1.TabIndex = 53;
             // 
             // Filter2DCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.borderTypeCtrl1);
+            this.Controls.Add(this.depthCtrl1);
+            this.Controls.Add(this.imageInOutCtrl1);
             this.Controls.Add(this.numericUpDownAnchorY);
             this.Controls.Add(this.numericUpDownAnchorX);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBoxParameter);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.numericUpDownInputNo);
-            this.Controls.Add(this.numericUpDownOutNo);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBoxBorderType);
-            this.Controls.Add(this.comboBoxDDepth);
             this.Controls.Add(this.textBoxDelta);
             this.Controls.Add(this.buttonAddKernel);
             this.Controls.Add(this.buttonDelKernel);
             this.Controls.Add(this.buttonExec);
             this.Name = "Filter2DCtrl";
             this.Size = new System.Drawing.Size(570, 500);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownInputNo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOutNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAnchorY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAnchorX)).EndInit();
@@ -348,16 +274,8 @@ namespace OpenCV_test
 
         private System.Windows.Forms.TextBox textBoxParameter;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDownInputNo;
-        private System.Windows.Forms.NumericUpDown numericUpDownOutNo;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBoxBorderType;
-        private System.Windows.Forms.ComboBox comboBoxDDepth;
         private System.Windows.Forms.TextBox textBoxDelta;
         private System.Windows.Forms.Button buttonExec;
         private System.Windows.Forms.Label label8;
@@ -370,5 +288,8 @@ namespace OpenCV_test
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private Common.BorderTypeCtrl borderTypeCtrl1;
+        private Common.DepthCtrl depthCtrl1;
+        private Common.ImageInOutCtrl imageInOutCtrl1;
     }
 }

@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -58,6 +73,26 @@
     <Prefer32Bit>true</Prefer32Bit>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -78,6 +113,36 @@
     <Compile Include="AboutDialog.Designer.cs">
       <DependentUpon>AboutDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\BorderTypeCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\BorderTypeCtrl.Designer.cs">
+      <DependentUpon>BorderTypeCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DepthCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\DepthCtrl.Designer.cs">
+      <DependentUpon>DepthCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ImageInOutCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\ImageInOutCtrl.Designer.cs">
+      <DependentUpon>ImageInOutCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\KernelSizeCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\KernelSizeCtrl.Designer.cs">
+      <DependentUpon>KernelSizeCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Denoising\BilateralFilterCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Denoising\BilateralFilterCtrl.Designer.cs">
+      <DependentUpon>BilateralFilterCtrl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Converter\BitDepthConverterCtrl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,6 +154,18 @@
     </Compile>
     <Compile Include="ConvolutionTestCtrl.Designer.cs">
       <DependentUpon>ConvolutionTestCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Denoising\BlurCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Denoising\BlurCtrl.Designer.cs">
+      <DependentUpon>BlurCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Denoising\MedianBlurCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Denoising\MedianBlurCtrl.Designer.cs">
+      <DependentUpon>MedianBlurCtrl.cs</DependentUpon>
     </Compile>
     <Compile Include="Edge\CannyCtrl.cs">
       <SubType>UserControl</SubType>
@@ -156,6 +233,12 @@
     <Compile Include="Edge\LaplacianCtrl.Designer.cs">
       <DependentUpon>LaplacianCtrl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Denoising\GaussianBlurCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Denoising\GaussianBlurCtrl.Designer.cs">
+      <DependentUpon>GaussianBlurCtrl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Edge\SobelCtrl.cs">
@@ -174,11 +257,32 @@
     <EmbeddedResource Include="AboutDialog.resx">
       <DependentUpon>AboutDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Common\BorderTypeCtrl.resx">
+      <DependentUpon>BorderTypeCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\DepthCtrl.resx">
+      <DependentUpon>DepthCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ImageInOutCtrl.resx">
+      <DependentUpon>ImageInOutCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\KernelSizeCtrl.resx">
+      <DependentUpon>KernelSizeCtrl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Converter\BitDepthConverterCtrl.resx">
       <DependentUpon>BitDepthConverterCtrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConvolutionTestCtrl.resx">
       <DependentUpon>ConvolutionTestCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Denoising\BilateralFilterCtrl.resx">
+      <DependentUpon>BilateralFilterCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Denoising\BlurCtrl.resx">
+      <DependentUpon>BlurCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Denoising\MedianBlurCtrl.resx">
+      <DependentUpon>MedianBlurCtrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edge\CannyCtrl.resx">
       <DependentUpon>CannyCtrl.cs</DependentUpon>
@@ -200,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Edge\LaplacianCtrl.resx">
       <DependentUpon>LaplacianCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Denoising\GaussianBlurCtrl.resx">
+      <DependentUpon>GaussianBlurCtrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -240,6 +347,22 @@
     <Content Include="LICENSE_BSD.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OpenCV_dlls\x64\" />
+    <Folder Include="OpenCV_dlls\x86\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

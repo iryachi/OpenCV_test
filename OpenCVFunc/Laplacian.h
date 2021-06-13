@@ -36,13 +36,8 @@ namespace OpenCVFunc {
 
 			ImageMemManager::SetImage(outImage, imageOutNo);
 
-			String^ nl = System::Environment::NewLine;
-			String^ retStr = "input image param" + nl;
-			retStr += Util::GetParam(inImage);
-			retStr += nl + "output image param" + nl;
-			retStr += Util::GetParam(outImage);
 
-			return retStr;
+			return Util::GetInOutParam(inImage, outImage);
 
 		}
 

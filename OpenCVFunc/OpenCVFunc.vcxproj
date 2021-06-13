@@ -81,6 +81,14 @@
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\opencv\build\include</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);C:\opencv\build\x64\vc15\lib</LibraryPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\opencv\build\include</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);C:\opencv\build\x64\vc15\lib</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);C:\opencv\build\x64\vc15\lib</LibraryPath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\opencv\build\include</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -89,7 +97,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>$(MSBuildProjectDirectory)\OpenCVLib\x86\opencv_world451d.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -100,7 +108,7 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>opencv_world451d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(MSBuildProjectDirectory)\OpenCVLib\x64\opencv_world451d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -111,7 +119,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>$(MSBuildProjectDirectory)\OpenCVLib\x86\opencv_world451.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -122,18 +130,22 @@
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>opencv_world451.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(MSBuildProjectDirectory)\OpenCVLib\x64\opencv_world451.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BilateralFilter.h" />
     <ClInclude Include="BitDepthConverter.h" />
+    <ClInclude Include="Blur.h" />
     <ClInclude Include="Canny.h" />
     <ClInclude Include="CvtColor.h" />
     <ClInclude Include="Filter2D.h" />
+    <ClInclude Include="GaussianBlur.h" />
     <ClInclude Include="ImageMemManager.h" />
     <ClInclude Include="Imread.h" />
     <ClInclude Include="Imwrite.h" />
     <ClInclude Include="Laplacian.h" />
+    <ClInclude Include="Median.h" />
     <ClInclude Include="Sobel.h" />
     <ClInclude Include="Threshold.h" />
     <ClInclude Include="pch.h" />
@@ -142,14 +154,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="BilateralFilter.cpp" />
     <ClCompile Include="BitDepthConverter.cpp" />
+    <ClCompile Include="Blur.cpp" />
     <ClCompile Include="Canny.cpp" />
     <ClCompile Include="CvtColor.cpp" />
     <ClCompile Include="Filter2D.cpp" />
+    <ClCompile Include="GaussianBlur.cpp" />
     <ClCompile Include="ImageMemManager.cpp" />
     <ClCompile Include="Imread.cpp" />
     <ClCompile Include="Imwrite.cpp" />
     <ClCompile Include="Laplacian.cpp" />
+    <ClCompile Include="Median.cpp" />
     <ClCompile Include="Sobel.cpp" />
     <ClCompile Include="Threshold.cpp" />
     <ClCompile Include="pch.cpp">

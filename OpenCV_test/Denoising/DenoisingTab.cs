@@ -16,10 +16,10 @@ namespace OpenCV_test
         {
             InitializeComponent();
 
-            Util.SetTabPage(this, "tabPageBitConverter", "Bit Converter", new BitDepthConverterCtrl());
-            Util.SetTabPage(this, "tabPageCvtColor", "CvtColor", new BitDepthConverterCtrl());
-
-
+            Util.SetTabPage(this, "tabPageMedianBlur", "Median", new MedianBlurCtrl());
+            Util.SetTabPage(this, "tabPageBlur", "Blur", new BlurCtrl());
+            Util.SetTabPage(this, "tabPageGaussianBlur", "Gaussian", new GaussianBlurCtrl());
+            Util.SetTabPage(this, "tabPageBilateralFilter", "BilateralFilter", new BilateralFilterCtrl());
         }
 
         protected override void OnPaint(PaintEventArgs pe)

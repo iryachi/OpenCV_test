@@ -27,5 +27,17 @@ public:
 
 		return str;
 	}
+
+	static String^ GetInOutParam(cv::Mat* inImg, cv::Mat* outImg)
+	{
+		String^ nl = System::Environment::NewLine;
+		String^ retStr = "input image param" + nl;
+		retStr += Util::GetParam(inImg);
+		retStr += nl + "output image param" + nl;
+		retStr += Util::GetParam(outImg);
+
+		return retStr;
+	}
+
 };
 

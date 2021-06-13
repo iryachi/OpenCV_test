@@ -29,10 +29,6 @@ namespace OpenCV_test
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDownInputNo = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownOutNo = new System.Windows.Forms.NumericUpDown();
             this.textBoxParameter = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,57 +36,9 @@ namespace OpenCV_test
             this.buttonExec = new System.Windows.Forms.Button();
             this.numericUpDownCnNum = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownInputNo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOutNo)).BeginInit();
+            this.imageInOutCtrl1 = new OpenCV_test.Common.ImageInOutCtrl();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCnNum)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 12);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Input No.";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(230, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 12);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Output No.";
-            // 
-            // numericUpDownInputNo
-            // 
-            this.numericUpDownInputNo.Location = new System.Drawing.Point(95, 3);
-            this.numericUpDownInputNo.Maximum = new decimal(new int[] {
-            9,
-            0,
-            0,
-            0});
-            this.numericUpDownInputNo.Name = "numericUpDownInputNo";
-            this.numericUpDownInputNo.Size = new System.Drawing.Size(57, 19);
-            this.numericUpDownInputNo.TabIndex = 7;
-            // 
-            // numericUpDownOutNo
-            // 
-            this.numericUpDownOutNo.Location = new System.Drawing.Point(295, 3);
-            this.numericUpDownOutNo.Maximum = new decimal(new int[] {
-            9,
-            0,
-            0,
-            0});
-            this.numericUpDownOutNo.Name = "numericUpDownOutNo";
-            this.numericUpDownOutNo.Size = new System.Drawing.Size(57, 19);
-            this.numericUpDownOutNo.TabIndex = 8;
-            this.numericUpDownOutNo.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // textBoxParameter
             // 
@@ -113,7 +61,7 @@ namespace OpenCV_test
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 33);
+            this.label3.Location = new System.Drawing.Point(19, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 12);
             this.label3.TabIndex = 13;
@@ -122,14 +70,14 @@ namespace OpenCV_test
             // comboBoxCode
             // 
             this.comboBoxCode.FormattingEnabled = true;
-            this.comboBoxCode.Location = new System.Drawing.Point(54, 30);
+            this.comboBoxCode.Location = new System.Drawing.Point(54, 68);
             this.comboBoxCode.Name = "comboBoxCode";
             this.comboBoxCode.Size = new System.Drawing.Size(338, 20);
             this.comboBoxCode.TabIndex = 12;
             // 
             // buttonExec
             // 
-            this.buttonExec.Location = new System.Drawing.Point(295, 81);
+            this.buttonExec.Location = new System.Drawing.Point(295, 119);
             this.buttonExec.Name = "buttonExec";
             this.buttonExec.Size = new System.Drawing.Size(75, 23);
             this.buttonExec.TabIndex = 11;
@@ -139,7 +87,7 @@ namespace OpenCV_test
             // 
             // numericUpDownCnNum
             // 
-            this.numericUpDownCnNum.Location = new System.Drawing.Point(133, 56);
+            this.numericUpDownCnNum.Location = new System.Drawing.Point(133, 94);
             this.numericUpDownCnNum.Maximum = new decimal(new int[] {
             9,
             0,
@@ -152,31 +100,33 @@ namespace OpenCV_test
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 58);
+            this.label1.Location = new System.Drawing.Point(19, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 12);
             this.label1.TabIndex = 13;
             this.label1.Text = "dstCn (default : 0)";
             // 
+            // imageInOutCtrl1
+            // 
+            this.imageInOutCtrl1.Location = new System.Drawing.Point(3, 3);
+            this.imageInOutCtrl1.Name = "imageInOutCtrl1";
+            this.imageInOutCtrl1.Size = new System.Drawing.Size(145, 35);
+            this.imageInOutCtrl1.TabIndex = 16;
+            // 
             // CvtColorCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.imageInOutCtrl1);
             this.Controls.Add(this.textBoxParameter);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxCode);
             this.Controls.Add(this.buttonExec);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.numericUpDownCnNum);
-            this.Controls.Add(this.numericUpDownInputNo);
-            this.Controls.Add(this.numericUpDownOutNo);
             this.Name = "CvtColorCtrl";
             this.Size = new System.Drawing.Size(409, 318);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownInputNo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOutNo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCnNum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -184,11 +134,6 @@ namespace OpenCV_test
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDownInputNo;
-        private System.Windows.Forms.NumericUpDown numericUpDownOutNo;
         private System.Windows.Forms.TextBox textBoxParameter;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
@@ -196,5 +141,6 @@ namespace OpenCV_test
         private System.Windows.Forms.Button buttonExec;
         private System.Windows.Forms.NumericUpDown numericUpDownCnNum;
         private System.Windows.Forms.Label label1;
+        private Common.ImageInOutCtrl imageInOutCtrl1;
     }
 }

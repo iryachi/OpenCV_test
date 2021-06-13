@@ -19,15 +19,10 @@ namespace OpenCVFunc {
 			if (inImage == nullptr) { return "no input image"; }
 			cv::Mat* outImage = new cv::Mat;
 			cv::threshold(*inImage, *outImage, thresh, maxval, type);
-			ImageMemManager::SetImage(outImage, imageOutNo);
-			
-			String^ nl = System::Environment::NewLine;
-			String^ retStr = "input image param" + nl;
-			retStr += Util::GetParam(inImage);
-			retStr += nl + "output image param" + nl;
-			retStr += Util::GetParam(outImage);
-			
-			return retStr;
+
+			ImageMemManager::SetImage(outImage, imageOutNo);			
+
+			return Util::GetInOutParam(inImage, outImage);
 		}
 			
 

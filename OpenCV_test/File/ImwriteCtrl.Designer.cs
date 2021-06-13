@@ -36,21 +36,21 @@ namespace OpenCV_test
             this.numericUpDownValue1 = new System.Windows.Forms.NumericUpDown();
             this.comboBoxID1 = new System.Windows.Forms.ComboBox();
             this.groupBoxParam = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDownValue2 = new System.Windows.Forms.NumericUpDown();
-            this.comboBoxID2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDownValue3 = new System.Windows.Forms.NumericUpDown();
             this.comboBoxID3 = new System.Windows.Forms.ComboBox();
+            this.comboBoxID2 = new System.Windows.Forms.ComboBox();
+            this.numericUpDownValue3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownValue2 = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
             this.textBoxParameter = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownInputNo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownValue1)).BeginInit();
             this.groupBoxParam.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownValue2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownValue3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownValue2)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -132,35 +132,13 @@ namespace OpenCV_test
             this.groupBoxParam.TabStop = false;
             this.groupBoxParam.Text = "Parameter";
             // 
-            // label1
+            // comboBoxID3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(11, 12);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(11, 12);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "2";
-            // 
-            // numericUpDownValue2
-            // 
-            this.numericUpDownValue2.Location = new System.Drawing.Point(281, 58);
-            this.numericUpDownValue2.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDownValue2.Name = "numericUpDownValue2";
-            this.numericUpDownValue2.Size = new System.Drawing.Size(57, 19);
-            this.numericUpDownValue2.TabIndex = 22;
+            this.comboBoxID3.FormattingEnabled = true;
+            this.comboBoxID3.Location = new System.Drawing.Point(32, 83);
+            this.comboBoxID3.Name = "comboBoxID3";
+            this.comboBoxID3.Size = new System.Drawing.Size(243, 20);
+            this.comboBoxID3.TabIndex = 21;
             // 
             // comboBoxID2
             // 
@@ -169,15 +147,6 @@ namespace OpenCV_test
             this.comboBoxID2.Name = "comboBoxID2";
             this.comboBoxID2.Size = new System.Drawing.Size(243, 20);
             this.comboBoxID2.TabIndex = 21;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(11, 12);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "3";
             // 
             // numericUpDownValue3
             // 
@@ -191,13 +160,44 @@ namespace OpenCV_test
             this.numericUpDownValue3.Size = new System.Drawing.Size(57, 19);
             this.numericUpDownValue3.TabIndex = 22;
             // 
-            // comboBoxID3
+            // numericUpDownValue2
             // 
-            this.comboBoxID3.FormattingEnabled = true;
-            this.comboBoxID3.Location = new System.Drawing.Point(32, 83);
-            this.comboBoxID3.Name = "comboBoxID3";
-            this.comboBoxID3.Size = new System.Drawing.Size(243, 20);
-            this.comboBoxID3.TabIndex = 21;
+            this.numericUpDownValue2.Location = new System.Drawing.Point(281, 58);
+            this.numericUpDownValue2.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDownValue2.Name = "numericUpDownValue2";
+            this.numericUpDownValue2.Size = new System.Drawing.Size(57, 19);
+            this.numericUpDownValue2.TabIndex = 22;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(10, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(11, 12);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "3";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(10, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(11, 12);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(11, 12);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "1";
             // 
             // buttonSave
             // 
@@ -205,7 +205,7 @@ namespace OpenCV_test
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 26;
-            this.buttonSave.Text = "保存";
+            this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
@@ -243,8 +243,8 @@ namespace OpenCV_test
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownValue1)).EndInit();
             this.groupBoxParam.ResumeLayout(false);
             this.groupBoxParam.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownValue2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownValue3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownValue2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -12,7 +12,7 @@ namespace OpenCV_test
 {
     public partial class CvtColorCtrl : UserControl
     {
-        OpenCVFunc.CvtColor cvtColor = new OpenCVFunc.CvtColor();
+        OpenCVFunc.CvtColor cvtColor = null;
         public CvtColorCtrl()
         {
             InitializeComponent();
@@ -218,8 +218,11 @@ namespace OpenCV_test
         {
             try
             {
-                int inputNo = (int)numericUpDownInputNo.Value;
-                int outputNo = (int)numericUpDownOutNo.Value;
+                if (cvtColor == null)
+                    cvtColor = new OpenCVFunc.CvtColor();
+
+                int inputNo = imageInOutCtrl1.InNo;
+                int outputNo = imageInOutCtrl1.OutNo;
 
                 int code = (int)comboBoxCode.SelectedValue;
                 int dstCn = (int)numericUpDownCnNum.Value;

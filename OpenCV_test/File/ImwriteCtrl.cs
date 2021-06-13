@@ -12,7 +12,7 @@ namespace OpenCV_test
 {
     public partial class ImwriteCtrl : UserControl
     {
-        OpenCVFunc.Imwrite imwrite = new OpenCVFunc.Imwrite();
+        OpenCVFunc.Imwrite imwrite = null;
 
         public ImwriteCtrl()
         {
@@ -59,6 +59,10 @@ namespace OpenCV_test
             dlg.Filter = "Image File. |*.bmp;*.jpg;*.jpeg;*.png|All Files. |*.*";
             if(dlg.ShowDialog() == DialogResult.OK)
             {
+                if (imwrite == null)
+                    imwrite = new OpenCVFunc.Imwrite();
+
+
                 List<int> parameter = new List<int>();
                 if(comboBoxID1.SelectedIndex != 0)
                 {
