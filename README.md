@@ -10,12 +10,12 @@ OpenCV や画像処理を学び始めた人に少しでも役に立でばよい�
 ソースをダウンロードした場合は OpenCV をインストールしたフォルダへ Path の設定が必要。
 OpenCV バージョン 4.5.1　を使用。
 
-リリースは OpenCV_test.exe を起動すれば使用できる。（ようにする予定）
+リリースは OpenCV_test.exe を起動すれば使用できる。
 
 
 # 使用方法
 こちらを参照
-(URL)。。。。　　（準備中）
+https://iryachi.stars.ne.jp/opencv_test_imple/
 
 
 # License

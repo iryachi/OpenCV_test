@@ -1,13 +1,9 @@
 #pragma once
 
-#include <opencv2/opencv.hpp>
-#include <msclr/marshal_cppstd.h>
-#include "ImageMemManager.h"
-#include "Util.h"
-
+#include "FilterBase.h"
 
 namespace OpenCVFunc {
-	public ref class Canny
+	public ref class Canny : public FilterBase
 	{
 	public:
 		String^ Canny_exec(
@@ -20,20 +16,27 @@ namespace OpenCVFunc {
 		{
 
 			cv::Mat* inImage = ImageMemManager::GetImage(imageInNo);
-			if (inImage == nullptr) { return "no input image"; }
+			if (inImage == nullptr) { return "no input image"; }			
 
-			cv::Mat* outImage = new cv::Mat;
+			cv::Mat* outImage = new cv::Mat();
+			cv::Mat dst = cv::Mat();
+			cv::Mat src = cv::Mat();
+			getImages(inImage, outImage, &src, &dst);
+
 			try {
-				cv::Canny(*inImage, *outImage, threshold1, threshold2, apertureSize, L2gradient);
+				cv::Canny(src, dst, threshold1, threshold2, apertureSize, L2gradient);
 			}
 			catch (...) {
+				inImage = NULL;
 				delete (outImage);
 				throw;
 			}
 
 			ImageMemManager::SetImage(outImage, imageOutNo);
 
-			return Util::GetInOutParam(inImage, outImage);
+			String^ retStr = Util::GetInOutParam(inImage, outImage);
+			inImage = NULL;
+			return  retStr;
 		}
 	};
 }

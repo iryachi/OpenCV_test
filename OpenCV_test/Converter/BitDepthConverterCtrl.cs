@@ -12,7 +12,6 @@ namespace OpenCV_test
 {
     public partial class BitDepthConverterCtrl : UserControl
     {
-        OpenCVFunc.BitDepthConverter bitDepthConverter = null;
         public BitDepthConverterCtrl()
         {
             InitializeComponent();      
@@ -22,15 +21,14 @@ namespace OpenCV_test
         {
             try
             {
-                double scale = double.Parse(textBoxSacale.Text);
-                double delta = double.Parse(textBoxDelta.Text);
+                double scale = numberTextBoxScale.Data;
+                double delta = numberTextBoxDelta.Data;
 
                 int ddepth = depthCtrl1.DepthNo;
                 int inputNo = imageInOutCtrl1.InNo;
                 int outputNo = imageInOutCtrl1.OutNo;
 
-                if (bitDepthConverter == null)
-                    bitDepthConverter = new OpenCVFunc.BitDepthConverter();
+                OpenCVFunc.BitDepthConverter bitDepthConverter = new OpenCVFunc.BitDepthConverter();
 
                 String retStr = bitDepthConverter.BitDepthConverter_exec(ddepth, scale, delta, inputNo, outputNo);
                 textBoxParameter.Text = retStr;

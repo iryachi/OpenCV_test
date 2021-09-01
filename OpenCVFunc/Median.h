@@ -1,10 +1,11 @@
 #pragma once
 
-#include "Util.h"
+
+#include "FilterBase.h"
 
 
 namespace OpenCVFunc {
-	public ref class Median
+	public ref class Median : public FilterBase
 	{
 	public:
 		String^ MedianBlur_exec(
@@ -16,11 +17,18 @@ namespace OpenCVFunc {
 			cv::Mat* inImage = ImageMemManager::GetImage(imageInNo);
 			if (inImage == nullptr) { return "no input image"; }
 
-			cv::Mat* outImage = new cv::Mat;
+			cv::Mat* outImage = new cv::Mat();
+			cv::Mat dst = cv::Mat();
+			cv::Mat src = cv::Mat();
+
+			getImages(inImage, outImage, &src, &dst);
+
+
 			try {
-				cv::medianBlur(*inImage, *outImage, kernelSize);
+				cv::medianBlur(src, dst, kernelSize);
 			}
 			catch (...) {
+				inImage = NULL;
 				delete (outImage);
 				throw;
 			}
@@ -28,8 +36,9 @@ namespace OpenCVFunc {
 
 			ImageMemManager::SetImage(outImage, imageOutNo);
 
-
-			return Util::GetInOutParam(inImage, outImage);
+			String^ retStr = Util::GetInOutParam(inImage, outImage);
+			inImage = NULL;
+			return  retStr;
 
 		}
 	};

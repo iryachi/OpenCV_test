@@ -1,10 +1,10 @@
 #pragma once
 
-#include "Util.h"
+#include "FilterBase.h"
 
 namespace OpenCVFunc
 {
-	public ref class GaussianBlur
+	public ref class GaussianBlur : public FilterBase
 	{
 	public:
 		String^ GaussianBlur_exec(
@@ -21,9 +21,15 @@ namespace OpenCVFunc
 
 			cv::Size ksize(kernelSizeX, kernelSizeY);
 
-			cv::Mat* outImage = new cv::Mat;
+
+			cv::Mat* outImage = new cv::Mat();
+			cv::Mat dst = cv::Mat();
+			cv::Mat src = cv::Mat();
+
+			getImages(inImage, outImage, &src, &dst);
+
 			try {
-				cv::GaussianBlur(*inImage, *outImage, ksize, sigmaX, sigmaY, borderType);
+				cv::GaussianBlur(src, dst, ksize, sigmaX, sigmaY, borderType);
 			}
 			catch (...) {
 				delete (outImage);
@@ -33,8 +39,9 @@ namespace OpenCVFunc
 
 			ImageMemManager::SetImage(outImage, imageOutNo);
 
-
-			return Util::GetInOutParam(inImage, outImage);
+			String^ retStr = Util::GetInOutParam(inImage, outImage);
+			inImage = NULL;
+			return  retStr;
 
 		}
 	};

@@ -1,14 +1,11 @@
 #pragma once
 
-#include <opencv2/opencv.hpp>
-#include <msclr/marshal_cppstd.h>
-#include "ImageMemManager.h"
-#include "Util.h"
+#include "FilterBase.h"
 
 using namespace System;
 
 namespace OpenCVFunc {
-	public ref class Filter2D
+	public ref class Filter2D : public FilterBase
 	{
 	public:
 		String^ Filter2D_exec(
@@ -30,18 +27,26 @@ namespace OpenCVFunc {
 			if (inImage == nullptr) { return "no input image"; }
 
 			cv::Mat* outImage = new cv::Mat;
+			cv::Mat dst = cv::Mat();
+			cv::Mat src = cv::Mat();
+
+			getImages(inImage, outImage, &src, &dst);
+
+
 			try {
-				cv::filter2D(*inImage, *outImage, ddepth, k, cv::Point(anchorX, anchorY), delta, borderType);
+				cv::filter2D(src, dst, ddepth, k, cv::Point(anchorX, anchorY), delta, borderType);
 			}
 			catch (...) {
 				delete (outImage);
+				inImage = NULL;
 				throw;
 			}
 
 			ImageMemManager::SetImage(outImage, imageOutNo);
 
-
-			return Util::GetInOutParam(inImage, outImage);
+			String^ retStr = Util::GetInOutParam(inImage, outImage);
+			inImage = NULL;
+			return  retStr;
 
 		}
 

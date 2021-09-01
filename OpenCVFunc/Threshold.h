@@ -1,15 +1,13 @@
 ﻿#pragma once
 
-#include <opencv2/opencv.hpp>
-#include <msclr/marshal_cppstd.h>
-#include "ImageMemManager.h"
-#include "Util.h"
+
+#include "FilterBase.h"
 
 using namespace System;
 using namespace System::Collections::Generic;
 
 namespace OpenCVFunc {
-	public ref class Threshold
+	public ref class Threshold : public FilterBase
 	{
 		// TODO: このクラスのメソッドをここに追加します。
 	public:
@@ -17,12 +15,27 @@ namespace OpenCVFunc {
 		{
 			cv::Mat* inImage = ImageMemManager::GetImage(imageInNo);
 			if (inImage == nullptr) { return "no input image"; }
-			cv::Mat* outImage = new cv::Mat;
-			cv::threshold(*inImage, *outImage, thresh, maxval, type);
+			
+			cv::Mat* outImage = new cv::Mat();
+			cv::Mat dst = cv::Mat();
+			cv::Mat src = cv::Mat();
 
-			ImageMemManager::SetImage(outImage, imageOutNo);			
+			getImages(inImage, outImage, &src, &dst);
 
-			return Util::GetInOutParam(inImage, outImage);
+			try {
+				cv::threshold(src, dst, thresh, maxval, type);
+			}
+			catch (...) {
+				inImage = NULL;
+				delete (outImage);
+				throw;
+			}
+
+			ImageMemManager::SetImage(outImage, imageOutNo);		
+
+			String^ retStr = Util::GetInOutParam(inImage, outImage);
+			inImage = NULL;
+			return  retStr;
 		}
 			
 

@@ -31,14 +31,23 @@ namespace OpenCV_test
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageImageFile = new System.Windows.Forms.TabPage();
-            this.imageFileTab1 = new OpenCV_test.ImageFileTab();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.imreadCtrl1 = new OpenCV_test.ImreadCtrl();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.imwriteCtrl1 = new OpenCV_test.ImwriteCtrl();
             this.tabPageConverter = new System.Windows.Forms.TabPage();
-            this.converterTab1 = new OpenCV_test.ConverterTab();
+            this.converterTabCtrl1 = new OpenCV_test.Converter.ConverterTabCtrl();
             this.tabPageDenoising = new System.Windows.Forms.TabPage();
+            this.denoisingTabCtrl1 = new OpenCV_test.Denoising.DenoisingTabCtrl();
             this.tabPageEdge = new System.Windows.Forms.TabPage();
-            this.edgeDitectionTab1 = new OpenCV_test.EdgeDitectionTab();
+            this.edgeDitectTabCtrl1 = new OpenCV_test.Edge.EdgeDitectTabCtrl();
             this.tabPageFilter2D = new System.Windows.Forms.TabPage();
+            this.filter2DCtrl1 = new OpenCV_test.Filter2DCtrl();
             this.tabPageConvTest = new System.Windows.Forms.TabPage();
+            this.convolutionTestCtrl1 = new OpenCV_test.ConvolutionTestCtrl();
+            this.tabPageRoi = new System.Windows.Forms.TabPage();
+            this.roiSettingCtrl1 = new OpenCV_test.Common.RoiSettingCtrl();
             this.btnAbout = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -48,20 +57,20 @@ namespace OpenCV_test
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.filter2DCtrl1 = new OpenCV_test.Filter2DCtrl();
-            this.convolutionTestCtrl1 = new OpenCV_test.ConvolutionTestCtrl();
-            this.denoisingTab1 = new OpenCV_test.DenoisingTab();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPageImageFile.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabPage10.SuspendLayout();
+            this.tabPage11.SuspendLayout();
             this.tabPageConverter.SuspendLayout();
             this.tabPageDenoising.SuspendLayout();
             this.tabPageEdge.SuspendLayout();
             this.tabPageFilter2D.SuspendLayout();
             this.tabPageConvTest.SuspendLayout();
+            this.tabPageRoi.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.denoisingTab1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -72,6 +81,7 @@ namespace OpenCV_test
             this.tabControl1.Controls.Add(this.tabPageEdge);
             this.tabControl1.Controls.Add(this.tabPageFilter2D);
             this.tabControl1.Controls.Add(this.tabPageConvTest);
+            this.tabControl1.Controls.Add(this.tabPageRoi);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 28);
             this.tabControl1.Name = "tabControl1";
@@ -81,26 +91,73 @@ namespace OpenCV_test
             // 
             // tabPageImageFile
             // 
-            this.tabPageImageFile.Controls.Add(this.imageFileTab1);
+            this.tabPageImageFile.Controls.Add(this.tabControl2);
             this.tabPageImageFile.Location = new System.Drawing.Point(4, 22);
             this.tabPageImageFile.Name = "tabPageImageFile";
             this.tabPageImageFile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageImageFile.Size = new System.Drawing.Size(594, 389);
+            this.tabPageImageFile.Size = new System.Drawing.Size(661, 496);
             this.tabPageImageFile.TabIndex = 1;
             this.tabPageImageFile.Text = "File";
             this.tabPageImageFile.UseVisualStyleBackColor = true;
             // 
-            // imageFileTab1
+            // tabControl2
             // 
-            this.imageFileTab1.Location = new System.Drawing.Point(0, 0);
-            this.imageFileTab1.Name = "imageFileTab1";
-            this.imageFileTab1.SelectedIndex = 0;
-            this.imageFileTab1.Size = new System.Drawing.Size(586, 381);
-            this.imageFileTab1.TabIndex = 0;
+            this.tabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl2.Controls.Add(this.tabPage10);
+            this.tabControl2.Controls.Add(this.tabPage11);
+            this.tabControl2.Location = new System.Drawing.Point(8, 6);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(647, 484);
+            this.tabControl2.TabIndex = 1;
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.Controls.Add(this.imreadCtrl1);
+            this.tabPage10.Location = new System.Drawing.Point(4, 22);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage10.Size = new System.Drawing.Size(639, 458);
+            this.tabPage10.TabIndex = 0;
+            this.tabPage10.Text = "imread";
+            this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // imreadCtrl1
+            // 
+            this.imreadCtrl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.imreadCtrl1.Location = new System.Drawing.Point(3, 6);
+            this.imreadCtrl1.Name = "imreadCtrl1";
+            this.imreadCtrl1.Size = new System.Drawing.Size(630, 446);
+            this.imreadCtrl1.TabIndex = 0;
+            // 
+            // tabPage11
+            // 
+            this.tabPage11.Controls.Add(this.imwriteCtrl1);
+            this.tabPage11.Location = new System.Drawing.Point(4, 22);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage11.Size = new System.Drawing.Size(639, 458);
+            this.tabPage11.TabIndex = 1;
+            this.tabPage11.Text = "imwrite";
+            this.tabPage11.UseVisualStyleBackColor = true;
+            // 
+            // imwriteCtrl1
+            // 
+            this.imwriteCtrl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.imwriteCtrl1.Location = new System.Drawing.Point(6, 6);
+            this.imwriteCtrl1.Name = "imwriteCtrl1";
+            this.imwriteCtrl1.Size = new System.Drawing.Size(627, 449);
+            this.imwriteCtrl1.TabIndex = 0;
             // 
             // tabPageConverter
             // 
-            this.tabPageConverter.Controls.Add(this.converterTab1);
+            this.tabPageConverter.Controls.Add(this.converterTabCtrl1);
             this.tabPageConverter.Location = new System.Drawing.Point(4, 22);
             this.tabPageConverter.Name = "tabPageConverter";
             this.tabPageConverter.Size = new System.Drawing.Size(661, 496);
@@ -108,17 +165,19 @@ namespace OpenCV_test
             this.tabPageConverter.Text = "Converter";
             this.tabPageConverter.UseVisualStyleBackColor = true;
             // 
-            // converterTab1
+            // converterTabCtrl1
             // 
-            this.converterTab1.Location = new System.Drawing.Point(3, 3);
-            this.converterTab1.Name = "converterTab1";
-            this.converterTab1.SelectedIndex = 0;
-            this.converterTab1.Size = new System.Drawing.Size(583, 383);
-            this.converterTab1.TabIndex = 0;
+            this.converterTabCtrl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.converterTabCtrl1.Location = new System.Drawing.Point(3, 3);
+            this.converterTabCtrl1.Name = "converterTabCtrl1";
+            this.converterTabCtrl1.Size = new System.Drawing.Size(655, 490);
+            this.converterTabCtrl1.TabIndex = 0;
             // 
             // tabPageDenoising
             // 
-            this.tabPageDenoising.Controls.Add(this.denoisingTab1);
+            this.tabPageDenoising.Controls.Add(this.denoisingTabCtrl1);
             this.tabPageDenoising.Location = new System.Drawing.Point(4, 22);
             this.tabPageDenoising.Name = "tabPageDenoising";
             this.tabPageDenoising.Size = new System.Drawing.Size(661, 496);
@@ -126,9 +185,19 @@ namespace OpenCV_test
             this.tabPageDenoising.Text = "Denoising";
             this.tabPageDenoising.UseVisualStyleBackColor = true;
             // 
+            // denoisingTabCtrl1
+            // 
+            this.denoisingTabCtrl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.denoisingTabCtrl1.Location = new System.Drawing.Point(0, 0);
+            this.denoisingTabCtrl1.Name = "denoisingTabCtrl1";
+            this.denoisingTabCtrl1.Size = new System.Drawing.Size(653, 493);
+            this.denoisingTabCtrl1.TabIndex = 0;
+            // 
             // tabPageEdge
             // 
-            this.tabPageEdge.Controls.Add(this.edgeDitectionTab1);
+            this.tabPageEdge.Controls.Add(this.edgeDitectTabCtrl1);
             this.tabPageEdge.Location = new System.Drawing.Point(4, 22);
             this.tabPageEdge.Name = "tabPageEdge";
             this.tabPageEdge.Padding = new System.Windows.Forms.Padding(3);
@@ -137,13 +206,15 @@ namespace OpenCV_test
             this.tabPageEdge.Text = "Edge";
             this.tabPageEdge.UseVisualStyleBackColor = true;
             // 
-            // edgeDitectionTab1
+            // edgeDitectTabCtrl1
             // 
-            this.edgeDitectionTab1.Location = new System.Drawing.Point(3, 3);
-            this.edgeDitectionTab1.Name = "edgeDitectionTab1";
-            this.edgeDitectionTab1.SelectedIndex = 0;
-            this.edgeDitectionTab1.Size = new System.Drawing.Size(588, 380);
-            this.edgeDitectionTab1.TabIndex = 0;
+            this.edgeDitectTabCtrl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.edgeDitectTabCtrl1.Location = new System.Drawing.Point(0, 0);
+            this.edgeDitectTabCtrl1.Name = "edgeDitectTabCtrl1";
+            this.edgeDitectTabCtrl1.Size = new System.Drawing.Size(653, 490);
+            this.edgeDitectTabCtrl1.TabIndex = 0;
             // 
             // tabPageFilter2D
             // 
@@ -154,6 +225,13 @@ namespace OpenCV_test
             this.tabPageFilter2D.TabIndex = 7;
             this.tabPageFilter2D.Text = "Filter2D";
             this.tabPageFilter2D.UseVisualStyleBackColor = true;
+            // 
+            // filter2DCtrl1
+            // 
+            this.filter2DCtrl1.Location = new System.Drawing.Point(3, 3);
+            this.filter2DCtrl1.Name = "filter2DCtrl1";
+            this.filter2DCtrl1.Size = new System.Drawing.Size(570, 500);
+            this.filter2DCtrl1.TabIndex = 0;
             // 
             // tabPageConvTest
             // 
@@ -166,10 +244,35 @@ namespace OpenCV_test
             this.tabPageConvTest.Text = "Convolution Test";
             this.tabPageConvTest.UseVisualStyleBackColor = true;
             // 
+            // convolutionTestCtrl1
+            // 
+            this.convolutionTestCtrl1.Location = new System.Drawing.Point(0, 0);
+            this.convolutionTestCtrl1.Name = "convolutionTestCtrl1";
+            this.convolutionTestCtrl1.Size = new System.Drawing.Size(628, 360);
+            this.convolutionTestCtrl1.TabIndex = 0;
+            // 
+            // tabPageRoi
+            // 
+            this.tabPageRoi.Controls.Add(this.roiSettingCtrl1);
+            this.tabPageRoi.Location = new System.Drawing.Point(4, 22);
+            this.tabPageRoi.Name = "tabPageRoi";
+            this.tabPageRoi.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageRoi.Size = new System.Drawing.Size(661, 496);
+            this.tabPageRoi.TabIndex = 10;
+            this.tabPageRoi.Text = "Roi";
+            this.tabPageRoi.UseVisualStyleBackColor = true;
+            // 
+            // roiSettingCtrl1
+            // 
+            this.roiSettingCtrl1.Location = new System.Drawing.Point(8, 6);
+            this.roiSettingCtrl1.Name = "roiSettingCtrl1";
+            this.roiSettingCtrl1.Size = new System.Drawing.Size(299, 419);
+            this.roiSettingCtrl1.TabIndex = 0;
+            // 
             // btnAbout
             // 
             this.btnAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAbout.Location = new System.Drawing.Point(582, 3);
+            this.btnAbout.Location = new System.Drawing.Point(560, 3);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(75, 23);
             this.btnAbout.TabIndex = 0;
@@ -261,28 +364,6 @@ namespace OpenCV_test
             this.tabPage9.UseVisualStyleBackColor = true;
             this.tabPage9.Visible = false;
             // 
-            // filter2DCtrl1
-            // 
-            this.filter2DCtrl1.Location = new System.Drawing.Point(3, 3);
-            this.filter2DCtrl1.Name = "filter2DCtrl1";
-            this.filter2DCtrl1.Size = new System.Drawing.Size(570, 500);
-            this.filter2DCtrl1.TabIndex = 0;
-            // 
-            // convolutionTestCtrl1
-            // 
-            this.convolutionTestCtrl1.Location = new System.Drawing.Point(0, 0);
-            this.convolutionTestCtrl1.Name = "convolutionTestCtrl1";
-            this.convolutionTestCtrl1.Size = new System.Drawing.Size(628, 360);
-            this.convolutionTestCtrl1.TabIndex = 0;
-            // 
-            // denoisingTab1
-            // 
-            this.denoisingTab1.Location = new System.Drawing.Point(0, 0);
-            this.denoisingTab1.Name = "denoisingTab1";
-            this.denoisingTab1.SelectedIndex = 0;
-            this.denoisingTab1.Size = new System.Drawing.Size(552, 413);
-            this.denoisingTab1.TabIndex = 0;
-            // 
             // tabPage5
             // 
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
@@ -316,13 +397,16 @@ namespace OpenCV_test
             this.FontChanged += new System.EventHandler(this.Form1_FontChanged);
             this.tabControl1.ResumeLayout(false);
             this.tabPageImageFile.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage10.ResumeLayout(false);
+            this.tabPage11.ResumeLayout(false);
             this.tabPageConverter.ResumeLayout(false);
             this.tabPageDenoising.ResumeLayout(false);
             this.tabPageEdge.ResumeLayout(false);
             this.tabPageFilter2D.ResumeLayout(false);
             this.tabPageConvTest.ResumeLayout(false);
+            this.tabPageRoi.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.denoisingTab1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -338,21 +422,27 @@ namespace OpenCV_test
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabPage tabPageDenoising;
         private System.Windows.Forms.TabPage tabPageConvTest;
-        private ImageFileTab imageFileTab1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private ConverterTab converterTab1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private EdgeDitectionTab edgeDitectionTab1;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.TabPage tabPage9;
         private Filter2DCtrl filter2DCtrl1;
         private ConvolutionTestCtrl convolutionTestCtrl1;
-        private DenoisingTab denoisingTab1;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPageRoi;
+        private Common.RoiSettingCtrl roiSettingCtrl1;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabPage10;
+        private ImreadCtrl imreadCtrl1;
+        private System.Windows.Forms.TabPage tabPage11;
+        private ImwriteCtrl imwriteCtrl1;
+        private Converter.ConverterTabCtrl converterTabCtrl1;
+        private Edge.EdgeDitectTabCtrl edgeDitectTabCtrl1;
+        private Denoising.DenoisingTabCtrl denoisingTabCtrl1;
     }
 }
 

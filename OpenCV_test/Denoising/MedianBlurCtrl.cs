@@ -12,7 +12,6 @@ namespace OpenCV_test
 {
     public partial class MedianBlurCtrl : UserControl
     {
-        OpenCVFunc.Median median = null;
         public MedianBlurCtrl()
         {
             InitializeComponent();
@@ -21,15 +20,17 @@ namespace OpenCV_test
 
         private void buttonExec_Click(object sender, EventArgs e)
         {
+
+            OpenCVFunc.Median median = new OpenCVFunc.Median();
             try
             {
-                if (median == null)
-                    median = new OpenCVFunc.Median();
 
                 int ksize = kernelSizeCtrl1.KernelSize;
 
                 int inputNo = imageInOutCtrl1.InNo;
                 int outputNo = imageInOutCtrl1.OutNo;
+
+                roiCtrl1.SetRoi(median);
 
                 String retStr = median.MedianBlur_exec(ksize, inputNo, outputNo);
                 textBoxParameter.Text = retStr;

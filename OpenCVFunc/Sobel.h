@@ -1,14 +1,13 @@
 #pragma once
 
-#include <opencv2/opencv.hpp>
-#include <msclr/marshal_cppstd.h>
-#include "ImageMemManager.h"
-#include "Util.h"
+
+#include "FilterBase.h"
+
 
 using namespace System;
 
 namespace OpenCVFunc {
-	public ref class Sobel
+	public ref class Sobel : public FilterBase
 	{
 	public:
 		String^ Sobel_exec(
@@ -26,20 +25,27 @@ namespace OpenCVFunc {
 				cv::Mat* inImage = ImageMemManager::GetImage(imageInNo);
 				if (inImage == nullptr) { return "no input image"; }
 
-				cv::Mat* outImage = new cv::Mat;
+
+				cv::Mat* outImage = new cv::Mat();
+				cv::Mat dst = cv::Mat();
+				cv::Mat src = cv::Mat();
+
+				getImages(inImage, outImage, &src, &dst);
+
 				try {
-					cv::Sobel(*inImage, *outImage, ddepth, dx, dy, ksize, scale, delta, borderType);
+					cv::Sobel(src, dst, ddepth, dx, dy, ksize, scale, delta, borderType);
 				}
 				catch (...) {
+					inImage = NULL;
 					delete (outImage);
 					throw ;
 				}
 				
 				ImageMemManager::SetImage(outImage, imageOutNo);
 
-
-				return Util::GetInOutParam(inImage, outImage);
-		
+				String^ retStr = Util::GetInOutParam(inImage, outImage);
+				inImage = NULL;
+				return  retStr;		
 		}
 
 	};

@@ -1,7 +1,7 @@
 ﻿
 namespace OpenCV_test
 {
-    partial class EdgeDitectionTab
+    partial class NumberTextBox
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -29,7 +29,14 @@ namespace OpenCV_test
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // NumberTextBox
+            // 
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumberTextBox_KeyPress);
+            this.Leave += new System.EventHandler(this.NumTextBox_Leave);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

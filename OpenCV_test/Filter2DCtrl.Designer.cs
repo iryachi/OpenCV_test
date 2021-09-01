@@ -31,99 +31,54 @@ namespace OpenCV_test
         {
             this.textBoxParameter = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxDelta = new System.Windows.Forms.TextBox();
             this.buttonExec = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonDelKernel = new System.Windows.Forms.Button();
             this.buttonAddKernel = new System.Windows.Forms.Button();
-            this.numericUpDownAnchorY = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownAnchorX = new System.Windows.Forms.NumericUpDown();
             this.borderTypeCtrl1 = new OpenCV_test.Common.BorderTypeCtrl();
             this.depthCtrl1 = new OpenCV_test.Common.DepthCtrl();
             this.imageInOutCtrl1 = new OpenCV_test.Common.ImageInOutCtrl();
+            this.numXYCtrl1 = new OpenCV_test.Common.NumXYCtrl();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numberTextBoxDelta = new OpenCV_test.NumberTextBox();
+            this.roiCtrl1 = new OpenCV_test.Common.RoiCtrl();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAnchorY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAnchorX)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxParameter
             // 
-            this.textBoxParameter.Location = new System.Drawing.Point(18, 308);
+            this.textBoxParameter.Location = new System.Drawing.Point(5, 495);
+            this.textBoxParameter.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBoxParameter.Multiline = true;
             this.textBoxParameter.Name = "textBoxParameter";
             this.textBoxParameter.ReadOnly = true;
-            this.textBoxParameter.Size = new System.Drawing.Size(247, 147);
+            this.textBoxParameter.Size = new System.Drawing.Size(409, 218);
             this.textBoxParameter.TabIndex = 42;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 293);
+            this.label6.Location = new System.Drawing.Point(5, 472);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 12);
+            this.label6.Size = new System.Drawing.Size(86, 18);
             this.label6.TabIndex = 41;
             this.label6.Text = "Parameter";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(193, 82);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 12);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "delta";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 82);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 12);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "anchor";
-            // 
-            // textBoxDelta
-            // 
-            this.textBoxDelta.Location = new System.Drawing.Point(195, 97);
-            this.textBoxDelta.Name = "textBoxDelta";
-            this.textBoxDelta.Size = new System.Drawing.Size(100, 19);
-            this.textBoxDelta.TabIndex = 24;
-            this.textBoxDelta.Text = "0";
-            // 
             // buttonExec
             // 
-            this.buttonExec.Location = new System.Drawing.Point(444, 97);
+            this.buttonExec.Location = new System.Drawing.Point(552, 495);
+            this.buttonExec.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonExec.Name = "buttonExec";
-            this.buttonExec.Size = new System.Drawing.Size(75, 23);
+            this.buttonExec.Size = new System.Drawing.Size(125, 34);
             this.buttonExec.TabIndex = 22;
             this.buttonExec.Text = "Exec";
             this.buttonExec.UseVisualStyleBackColor = true;
             this.buttonExec.Click += new System.EventHandler(this.buttonExec_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(11, 100);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(12, 12);
-            this.label8.TabIndex = 30;
-            this.label8.Text = "X";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(82, 100);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(12, 12);
-            this.label9.TabIndex = 30;
-            this.label9.Text = "Y";
             // 
             // dataGridView1
             // 
@@ -134,10 +89,11 @@ namespace OpenCV_test
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(25, 122);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 250);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(413, 145);
+            this.dataGridView1.Size = new System.Drawing.Size(688, 218);
             this.dataGridView1.TabIndex = 43;
             // 
             // Column1
@@ -157,9 +113,10 @@ namespace OpenCV_test
             // 
             // buttonDelKernel
             // 
-            this.buttonDelKernel.Location = new System.Drawing.Point(444, 232);
+            this.buttonDelKernel.Location = new System.Drawing.Point(698, 434);
+            this.buttonDelKernel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonDelKernel.Name = "buttonDelKernel";
-            this.buttonDelKernel.Size = new System.Drawing.Size(75, 23);
+            this.buttonDelKernel.Size = new System.Drawing.Size(125, 34);
             this.buttonDelKernel.TabIndex = 22;
             this.buttonDelKernel.Text = "Delete";
             this.buttonDelKernel.UseVisualStyleBackColor = true;
@@ -167,104 +124,133 @@ namespace OpenCV_test
             // 
             // buttonAddKernel
             // 
-            this.buttonAddKernel.Location = new System.Drawing.Point(444, 193);
+            this.buttonAddKernel.Location = new System.Drawing.Point(698, 372);
+            this.buttonAddKernel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.buttonAddKernel.Name = "buttonAddKernel";
-            this.buttonAddKernel.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddKernel.Size = new System.Drawing.Size(125, 34);
             this.buttonAddKernel.TabIndex = 22;
             this.buttonAddKernel.Text = "Add";
             this.buttonAddKernel.UseVisualStyleBackColor = true;
             this.buttonAddKernel.Click += new System.EventHandler(this.buttonAddKernel_Click);
             // 
-            // numericUpDownAnchorY
-            // 
-            this.numericUpDownAnchorY.Location = new System.Drawing.Point(100, 98);
-            this.numericUpDownAnchorY.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDownAnchorY.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownAnchorY.Name = "numericUpDownAnchorY";
-            this.numericUpDownAnchorY.Size = new System.Drawing.Size(49, 19);
-            this.numericUpDownAnchorY.TabIndex = 44;
-            this.numericUpDownAnchorY.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
-            // 
-            // numericUpDownAnchorX
-            // 
-            this.numericUpDownAnchorX.Location = new System.Drawing.Point(32, 98);
-            this.numericUpDownAnchorX.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDownAnchorX.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownAnchorX.Name = "numericUpDownAnchorX";
-            this.numericUpDownAnchorX.Size = new System.Drawing.Size(43, 19);
-            this.numericUpDownAnchorX.TabIndex = 45;
-            this.numericUpDownAnchorX.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
-            // 
             // borderTypeCtrl1
             // 
-            this.borderTypeCtrl1.Location = new System.Drawing.Point(276, 42);
+            this.borderTypeCtrl1.BorderNo = 3;
+            this.borderTypeCtrl1.Location = new System.Drawing.Point(343, 84);
+            this.borderTypeCtrl1.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.borderTypeCtrl1.Name = "borderTypeCtrl1";
-            this.borderTypeCtrl1.Size = new System.Drawing.Size(201, 37);
+            this.borderTypeCtrl1.Size = new System.Drawing.Size(333, 75);
             this.borderTypeCtrl1.TabIndex = 55;
             // 
             // depthCtrl1
             // 
-            this.depthCtrl1.Location = new System.Drawing.Point(0, 41);
+            this.depthCtrl1.Location = new System.Drawing.Point(0, 84);
+            this.depthCtrl1.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.depthCtrl1.Name = "depthCtrl1";
-            this.depthCtrl1.Size = new System.Drawing.Size(201, 38);
+            this.depthCtrl1.Size = new System.Drawing.Size(333, 75);
             this.depthCtrl1.TabIndex = 54;
             // 
             // imageInOutCtrl1
             // 
+            this.imageInOutCtrl1.InNo = 0;
+            this.imageInOutCtrl1.InputEnable = true;
             this.imageInOutCtrl1.Location = new System.Drawing.Point(0, 0);
+            this.imageInOutCtrl1.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.imageInOutCtrl1.Name = "imageInOutCtrl1";
-            this.imageInOutCtrl1.Size = new System.Drawing.Size(145, 35);
+            this.imageInOutCtrl1.OutNo = 1;
+            this.imageInOutCtrl1.OutputEnable = true;
+            this.imageInOutCtrl1.Size = new System.Drawing.Size(250, 75);
             this.imageInOutCtrl1.TabIndex = 53;
+            // 
+            // numXYCtrl1
+            // 
+            this.numXYCtrl1.DefaultX = -1;
+            this.numXYCtrl1.DefaultY = -1;
+            this.numXYCtrl1.Location = new System.Drawing.Point(0, 166);
+            this.numXYCtrl1.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.numXYCtrl1.MaxX = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numXYCtrl1.MaxY = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numXYCtrl1.MinX = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.numXYCtrl1.MinY = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.numXYCtrl1.Name = "numXYCtrl1";
+            this.numXYCtrl1.Size = new System.Drawing.Size(333, 75);
+            this.numXYCtrl1.TabIndex = 56;
+            this.numXYCtrl1.Title = "anchor";
+            this.numXYCtrl1.XTitle = "X";
+            this.numXYCtrl1.YTitle = "Y";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.numberTextBoxDelta);
+            this.groupBox1.Location = new System.Drawing.Point(343, 166);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.groupBox1.Size = new System.Drawing.Size(167, 75);
+            this.groupBox1.TabIndex = 57;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "delta";
+            // 
+            // numberTextBoxDelta
+            // 
+            this.numberTextBoxDelta.Data = 0D;
+            this.numberTextBoxDelta.DotNum = 5;
+            this.numberTextBoxDelta.Location = new System.Drawing.Point(10, 27);
+            this.numberTextBoxDelta.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.numberTextBoxDelta.MaxVal = 1.7976931348623157E+308D;
+            this.numberTextBoxDelta.MinVal = -1.7976931348623157E+308D;
+            this.numberTextBoxDelta.Name = "numberTextBoxDelta";
+            this.numberTextBoxDelta.Size = new System.Drawing.Size(131, 25);
+            this.numberTextBoxDelta.TabIndex = 0;
+            this.numberTextBoxDelta.Text = "0";
+            this.numberTextBoxDelta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // roiCtrl1
+            // 
+            this.roiCtrl1.Location = new System.Drawing.Point(343, 6);
+            this.roiCtrl1.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.roiCtrl1.Name = "roiCtrl1";
+            this.roiCtrl1.Size = new System.Drawing.Size(333, 75);
+            this.roiCtrl1.TabIndex = 58;
             // 
             // Filter2DCtrl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.roiCtrl1);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.numXYCtrl1);
             this.Controls.Add(this.borderTypeCtrl1);
             this.Controls.Add(this.depthCtrl1);
             this.Controls.Add(this.imageInOutCtrl1);
-            this.Controls.Add(this.numericUpDownAnchorY);
-            this.Controls.Add(this.numericUpDownAnchorX);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBoxParameter);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxDelta);
             this.Controls.Add(this.buttonAddKernel);
             this.Controls.Add(this.buttonDelKernel);
             this.Controls.Add(this.buttonExec);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Filter2DCtrl";
-            this.Size = new System.Drawing.Size(570, 500);
+            this.Size = new System.Drawing.Size(950, 750);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAnchorY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAnchorX)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,22 +260,19 @@ namespace OpenCV_test
 
         private System.Windows.Forms.TextBox textBoxParameter;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxDelta;
         private System.Windows.Forms.Button buttonExec;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonDelKernel;
         private System.Windows.Forms.Button buttonAddKernel;
-        private System.Windows.Forms.NumericUpDown numericUpDownAnchorY;
-        private System.Windows.Forms.NumericUpDown numericUpDownAnchorX;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private Common.BorderTypeCtrl borderTypeCtrl1;
         private Common.DepthCtrl depthCtrl1;
         private Common.ImageInOutCtrl imageInOutCtrl1;
+        private Common.NumXYCtrl numXYCtrl1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private NumberTextBox numberTextBoxDelta;
+        private Common.RoiCtrl roiCtrl1;
     }
 }

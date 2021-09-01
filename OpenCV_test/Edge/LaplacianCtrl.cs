@@ -12,7 +12,6 @@ namespace OpenCV_test
 {
     public partial class LaplacianCtrl : UserControl
     {
-        OpenCVFunc.Laplacian laplacian = null;
         public LaplacianCtrl()
         {
             InitializeComponent();
@@ -25,11 +24,10 @@ namespace OpenCV_test
         {
             try
             {
-                if (laplacian == null)
-                    laplacian = new OpenCVFunc.Laplacian();
+                OpenCVFunc.Laplacian laplacian = new OpenCVFunc.Laplacian();
 
-                double scale = double.Parse(textBoxSacale.Text);
-                double delta = double.Parse(textBoxDelta.Text);
+                double scale = numberTextBoxScale.Data;
+                double delta = numberTextBoxDelta.Data;
 
                 int ddepth = depthCtrl1.DepthNo;
                 int ksize = kernelSizeCtrl1.KernelSize;
@@ -37,6 +35,8 @@ namespace OpenCV_test
 
                 int inputNo = imageInOutCtrl1.InNo;
                 int outputNo = imageInOutCtrl1.OutNo;
+
+                roiCtrl1.SetRoi(laplacian);
 
                 String retStr = laplacian.Laplacian_exec(ddepth, ksize, scale, delta, borderType, inputNo, outputNo);
                 textBoxParameter.Text = retStr;

@@ -12,25 +12,17 @@ namespace OpenCV_test
 {
     public partial class CannyCtrl : UserControl
     {
-        OpenCVFunc.Canny canny = null;
         public CannyCtrl()
         {
             InitializeComponent();
-
-
-            kernelSizeCtrl1.Title = "apertureSize";
-            kernelSizeCtrl1.DefaultIndex = 2;
         }
 
         private void buttonExec_Click(object sender, EventArgs e)
         {
             try
             {
-                if (canny == null)
-                    canny = new OpenCVFunc.Canny();
+                OpenCVFunc.Canny canny = new OpenCVFunc.Canny();
 
-                double threshold1 = double.Parse(textBoxThreshold1.Text);
-                double threshold2 = double.Parse(textBoxThreshold2.Text);
 
                 int apertureSize = kernelSizeCtrl1.KernelSize;
                 bool L2gradient = checkBoxL2grradient.Checked;
@@ -38,7 +30,15 @@ namespace OpenCV_test
                 int inputNo = imageInOutCtrl1.InNo;
                 int outputNo = imageInOutCtrl1.OutNo;
 
-                String retStr = canny.Canny_exec(threshold1, threshold2, apertureSize, L2gradient, inputNo, outputNo);
+                roiCtrl1.SetRoi(canny);
+
+                String retStr = canny.Canny_exec(
+                    numberTextBoxThreshold1.Data, 
+                    numberTextBoxThreshold2.Data,
+                    apertureSize,
+                    L2gradient,
+                    inputNo,
+                    outputNo);
                 textBoxParameter.Text = retStr;
 
             }

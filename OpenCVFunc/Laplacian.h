@@ -1,14 +1,12 @@
 #pragma once
 
-#include <opencv2/opencv.hpp>
-#include <msclr/marshal_cppstd.h>
-#include "ImageMemManager.h"
-#include "Util.h"
+
+#include "FilterBase.h"
 
 using namespace System;
 
 namespace OpenCVFunc {
-	public ref class Laplacian
+	public ref class Laplacian : public FilterBase
 	{
 	public:
 		String^ Laplacian_exec(
@@ -25,9 +23,14 @@ namespace OpenCVFunc {
 			cv::Mat* inImage = ImageMemManager::GetImage(imageInNo);
 			if (inImage == nullptr) { return "no input image"; }
 
-			cv::Mat* outImage = new cv::Mat;
+			cv::Mat* outImage = new cv::Mat();
+			cv::Mat dst = cv::Mat();
+			cv::Mat src = cv::Mat();
+
+			getImages(inImage, outImage, &src, &dst);
+
 			try {
-				cv::Laplacian(*inImage, *outImage, ddepth, ksize, scale, delta, borderType);
+				cv::Laplacian(src, dst, ddepth, ksize, scale, delta, borderType);
 			}
 			catch (...) {
 				delete (outImage);
@@ -36,8 +39,9 @@ namespace OpenCVFunc {
 
 			ImageMemManager::SetImage(outImage, imageOutNo);
 
-
-			return Util::GetInOutParam(inImage, outImage);
+			String^ retStr = Util::GetInOutParam(inImage, outImage);
+			inImage = NULL;
+			return  retStr;
 
 		}
 

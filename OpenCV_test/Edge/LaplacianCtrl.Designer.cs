@@ -31,20 +31,23 @@ namespace OpenCV_test
         {
             this.textBoxParameter = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxDelta = new System.Windows.Forms.TextBox();
-            this.textBoxSacale = new System.Windows.Forms.TextBox();
             this.buttonExec = new System.Windows.Forms.Button();
             this.imageInOutCtrl1 = new OpenCV_test.Common.ImageInOutCtrl();
             this.depthCtrl1 = new OpenCV_test.Common.DepthCtrl();
             this.kernelSizeCtrl1 = new OpenCV_test.Common.KernelSizeCtrl();
             this.borderTypeCtrl1 = new OpenCV_test.Common.BorderTypeCtrl();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numberTextBoxScale = new OpenCV_test.NumberTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.numberTextBoxDelta = new OpenCV_test.NumberTextBox();
+            this.roiCtrl1 = new OpenCV_test.Common.RoiCtrl();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxParameter
             // 
-            this.textBoxParameter.Location = new System.Drawing.Point(3, 144);
+            this.textBoxParameter.Location = new System.Drawing.Point(-2, 261);
             this.textBoxParameter.Multiline = true;
             this.textBoxParameter.Name = "textBoxParameter";
             this.textBoxParameter.ReadOnly = true;
@@ -54,49 +57,15 @@ namespace OpenCV_test
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 129);
+            this.label6.Location = new System.Drawing.Point(-2, 246);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 12);
             this.label6.TabIndex = 41;
             this.label6.Text = "Parameter";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(104, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 12);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "delta";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-2, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 12);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "scale";
-            // 
-            // textBoxDelta
-            // 
-            this.textBoxDelta.Location = new System.Drawing.Point(106, 100);
-            this.textBoxDelta.Name = "textBoxDelta";
-            this.textBoxDelta.Size = new System.Drawing.Size(100, 19);
-            this.textBoxDelta.TabIndex = 24;
-            this.textBoxDelta.Text = "0";
-            // 
-            // textBoxSacale
-            // 
-            this.textBoxSacale.Location = new System.Drawing.Point(0, 100);
-            this.textBoxSacale.Name = "textBoxSacale";
-            this.textBoxSacale.Size = new System.Drawing.Size(100, 19);
-            this.textBoxSacale.TabIndex = 23;
-            this.textBoxSacale.Text = "1";
-            // 
             // buttonExec
             // 
-            this.buttonExec.Location = new System.Drawing.Point(275, 129);
+            this.buttonExec.Location = new System.Drawing.Point(125, 220);
             this.buttonExec.Name = "buttonExec";
             this.buttonExec.Size = new System.Drawing.Size(75, 23);
             this.buttonExec.TabIndex = 22;
@@ -106,49 +75,119 @@ namespace OpenCV_test
             // 
             // imageInOutCtrl1
             // 
+            this.imageInOutCtrl1.InNo = 0;
+            this.imageInOutCtrl1.InputEnable = true;
             this.imageInOutCtrl1.Location = new System.Drawing.Point(0, 0);
             this.imageInOutCtrl1.Name = "imageInOutCtrl1";
-            this.imageInOutCtrl1.Size = new System.Drawing.Size(145, 35);
+            this.imageInOutCtrl1.OutNo = 1;
+            this.imageInOutCtrl1.OutputEnable = true;
+            this.imageInOutCtrl1.Size = new System.Drawing.Size(200, 50);
             this.imageInOutCtrl1.TabIndex = 48;
             // 
             // depthCtrl1
             // 
-            this.depthCtrl1.Location = new System.Drawing.Point(0, 41);
+            this.depthCtrl1.Location = new System.Drawing.Point(0, 56);
             this.depthCtrl1.Name = "depthCtrl1";
-            this.depthCtrl1.Size = new System.Drawing.Size(201, 38);
+            this.depthCtrl1.Size = new System.Drawing.Size(200, 50);
             this.depthCtrl1.TabIndex = 49;
             // 
             // kernelSizeCtrl1
             // 
-            this.kernelSizeCtrl1.Location = new System.Drawing.Point(210, 41);
+            this.kernelSizeCtrl1.DefaultIndex = 1;
+            this.kernelSizeCtrl1.Location = new System.Drawing.Point(0, 112);
             this.kernelSizeCtrl1.Name = "kernelSizeCtrl1";
-            this.kernelSizeCtrl1.Size = new System.Drawing.Size(59, 38);
+            this.kernelSizeCtrl1.Size = new System.Drawing.Size(50, 50);
             this.kernelSizeCtrl1.TabIndex = 50;
+            this.kernelSizeCtrl1.Title = "ksize";
             // 
             // borderTypeCtrl1
             // 
-            this.borderTypeCtrl1.Location = new System.Drawing.Point(212, 86);
+            this.borderTypeCtrl1.BorderNo = 3;
+            this.borderTypeCtrl1.Location = new System.Drawing.Point(0, 164);
             this.borderTypeCtrl1.Name = "borderTypeCtrl1";
-            this.borderTypeCtrl1.Size = new System.Drawing.Size(201, 37);
+            this.borderTypeCtrl1.Size = new System.Drawing.Size(200, 50);
             this.borderTypeCtrl1.TabIndex = 51;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.numberTextBoxScale);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.numberTextBoxDelta);
+            this.groupBox2.Location = new System.Drawing.Point(56, 112);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(144, 50);
+            this.groupBox2.TabIndex = 53;
+            this.groupBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 12);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "scale";
+            // 
+            // numberTextBoxScale
+            // 
+            this.numberTextBoxScale.Data = 1D;
+            this.numberTextBoxScale.DotNum = 10;
+            this.numberTextBoxScale.Location = new System.Drawing.Point(8, 27);
+            this.numberTextBoxScale.MaxVal = 1.7976931348623157E+308D;
+            this.numberTextBoxScale.MinVal = -1.7976931348623157E+308D;
+            this.numberTextBoxScale.Name = "numberTextBoxScale";
+            this.numberTextBoxScale.Size = new System.Drawing.Size(60, 19);
+            this.numberTextBoxScale.TabIndex = 28;
+            this.numberTextBoxScale.Text = "1";
+            this.numberTextBoxScale.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(72, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 12);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "delta";
+            // 
+            // numberTextBoxDelta
+            // 
+            this.numberTextBoxDelta.Data = 0D;
+            this.numberTextBoxDelta.DotNum = 10;
+            this.numberTextBoxDelta.Location = new System.Drawing.Point(74, 27);
+            this.numberTextBoxDelta.MaxVal = 1.7976931348623157E+308D;
+            this.numberTextBoxDelta.MinVal = -1.7976931348623157E+308D;
+            this.numberTextBoxDelta.Name = "numberTextBoxDelta";
+            this.numberTextBoxDelta.Size = new System.Drawing.Size(60, 19);
+            this.numberTextBoxDelta.TabIndex = 28;
+            this.numberTextBoxDelta.Text = "0";
+            this.numberTextBoxDelta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // roiCtrl1
+            // 
+            this.roiCtrl1.Location = new System.Drawing.Point(206, 0);
+            this.roiCtrl1.Name = "roiCtrl1";
+            this.roiCtrl1.Size = new System.Drawing.Size(200, 50);
+            this.roiCtrl1.TabIndex = 57;
             // 
             // LaplacianCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.roiCtrl1);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.borderTypeCtrl1);
             this.Controls.Add(this.kernelSizeCtrl1);
             this.Controls.Add(this.depthCtrl1);
             this.Controls.Add(this.imageInOutCtrl1);
             this.Controls.Add(this.textBoxParameter);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxDelta);
-            this.Controls.Add(this.textBoxSacale);
             this.Controls.Add(this.buttonExec);
             this.Name = "LaplacianCtrl";
-            this.Size = new System.Drawing.Size(458, 315);
+            this.Size = new System.Drawing.Size(530, 414);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,14 +197,16 @@ namespace OpenCV_test
 
         private System.Windows.Forms.TextBox textBoxParameter;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxDelta;
-        private System.Windows.Forms.TextBox textBoxSacale;
         private System.Windows.Forms.Button buttonExec;
         private Common.ImageInOutCtrl imageInOutCtrl1;
         private Common.DepthCtrl depthCtrl1;
         private Common.KernelSizeCtrl kernelSizeCtrl1;
         private Common.BorderTypeCtrl borderTypeCtrl1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label3;
+        private NumberTextBox numberTextBoxScale;
+        private System.Windows.Forms.Label label4;
+        private NumberTextBox numberTextBoxDelta;
+        private Common.RoiCtrl roiCtrl1;
     }
 }

@@ -13,10 +13,18 @@ namespace OpenCV_test.Common
     public partial class KernelSizeCtrl : UserControl
     {
 
-        public string Title { set { lblTitile.Text = value; } }
+        public string Title
+        {
+            set { groupBox1.Text = value; }
+            get { return groupBox1.Text; }
+        }
         public int KernelSize { get { return (int)comboBoxKsize.SelectedValue; } }
 
-        public int DefaultIndex { set { comboBoxKsize.SelectedIndex = value; } }
+        public int DefaultIndex
+        {
+            set { comboBoxKsize.SelectedIndex = value; }
+            get { return comboBoxKsize.SelectedIndex; }
+        }
         public KernelSizeCtrl()
         {
             InitializeComponent();

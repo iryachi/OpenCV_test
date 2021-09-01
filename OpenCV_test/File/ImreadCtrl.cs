@@ -12,9 +12,6 @@ namespace OpenCV_test
 {
     public partial class ImreadCtrl : UserControl
     {
-        OpenCVFunc.Imread imread = null;
-
-
         public ImreadCtrl()
         {
             InitializeComponent();
@@ -56,8 +53,7 @@ namespace OpenCV_test
             dlg.Filter = "Image File. |*.bmp;*.jpg;*.jpeg;*.png|All Files. |*.*";
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                if (imread == null)
-                    imread = new OpenCVFunc.Imread();
+                OpenCVFunc.Imread imread = new OpenCVFunc.Imread();
 
                 int flags = 0;
                 if (comboBoxFlag1.SelectedIndex != 0)
@@ -67,7 +63,7 @@ namespace OpenCV_test
                 if (comboBoxFlag3.SelectedIndex != 0)
                     flags |= (int)comboBoxFlag3.SelectedValue;
 
-                int outputNo = (int)numericUpDownOutNo.Value;
+                int outputNo = imageInOutCtrl1.OutNo;
 
                String paramStr = imread.imread_exec(dlg.FileName, flags, outputNo);
                 textBoxParameter.Text = paramStr;

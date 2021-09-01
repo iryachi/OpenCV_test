@@ -12,7 +12,7 @@ namespace OpenCV_test
 {
     public partial class GaussianBlurCtrl : UserControl
     {
-        private OpenCVFunc.GaussianBlur gaussian = null;
+     
 
         public GaussianBlurCtrl()
         {
@@ -23,18 +23,19 @@ namespace OpenCV_test
         private void buttonExec_Click(object sender, EventArgs e)
         {
             try
-            {
-                if (gaussian == null)
-                    gaussian = new OpenCVFunc.GaussianBlur();
+            {   
+                OpenCVFunc.GaussianBlur gaussian =new OpenCVFunc.GaussianBlur();
 
                 int borderType = borderTypeCtrl1.BorderNo;
 
                 int inputNo = imageInOutCtrl1.InNo;
                 int outputNo = imageInOutCtrl1.OutNo;
 
+                roiCtrl1.SetRoi(gaussian);
+
                 string retStr = gaussian.GaussianBlur_exec(
-                    (int)numericUpDownKsizeX.Value, (int)numericUpDownKsizeY.Value,
-                     (int)numericUpDownSigmaX.Value, (int)numericUpDownSigmaY.Value,
+                    numXYCtrlKSize.X, numXYCtrlKSize.Y,
+                     numXYCtrlSigma.X, numXYCtrlSigma.Y,
                     borderType,
                     inputNo, outputNo);
 

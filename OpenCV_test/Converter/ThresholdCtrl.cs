@@ -12,7 +12,6 @@ namespace OpenCV_test
 {
     public partial class ThresholdCtrl : UserControl
     {
-        OpenCVFunc.Threshold threshold = null;
         public ThresholdCtrl()
         {
             InitializeComponent();
@@ -42,16 +41,16 @@ namespace OpenCV_test
         {
             try
             {
-                if (threshold == null)
-                    threshold = new OpenCVFunc.Threshold();
+                OpenCVFunc.Threshold threshold = new OpenCVFunc.Threshold();
 
-                double thre = double.Parse(textBoxThreshold.Text);
-                double maxval = double.Parse(textBoxMaxVal.Text);
+                double thre = numberTextBoxThreshold.Data;
+                double maxval = numberTextBoxMaxVal.Data;
 
                 int inputNo = imageInOutCtrl1.InNo;
                 int outputNo = imageInOutCtrl1.OutNo;
 
-               String retStr =   threshold.threshold_exec(thre, maxval, (int)comboBoxType.SelectedValue, inputNo, outputNo);
+                roiCtrl1.SetRoi(threshold);
+                String retStr =   threshold.threshold_exec(thre, maxval, (int)comboBoxType.SelectedValue, inputNo, outputNo);
                 textBoxParameter.Text = retStr;
             }
             catch (Exception exp)

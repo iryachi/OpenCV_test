@@ -29,43 +29,49 @@ namespace OpenCV_test.Common
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
             this.comboBoxBorderType = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(-2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 12);
-            this.label3.TabIndex = 59;
-            this.label3.Text = "borderType";
             // 
             // comboBoxBorderType
             // 
+            this.comboBoxBorderType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxBorderType.FormattingEnabled = true;
-            this.comboBoxBorderType.Location = new System.Drawing.Point(0, 15);
+            this.comboBoxBorderType.Location = new System.Drawing.Point(3, 18);
             this.comboBoxBorderType.Name = "comboBoxBorderType";
-            this.comboBoxBorderType.Size = new System.Drawing.Size(200, 20);
+            this.comboBoxBorderType.Size = new System.Drawing.Size(190, 20);
             this.comboBoxBorderType.TabIndex = 58;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.comboBoxBorderType);
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 45);
+            this.groupBox1.TabIndex = 60;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "borderType";
             // 
             // BorderTypeCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBoxBorderType);
+            this.Controls.Add(this.groupBox1);
             this.Name = "BorderTypeCtrl";
-            this.Size = new System.Drawing.Size(201, 37);
+            this.Size = new System.Drawing.Size(200, 45);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxBorderType;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

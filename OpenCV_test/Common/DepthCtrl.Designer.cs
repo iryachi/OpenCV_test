@@ -29,43 +29,46 @@ namespace OpenCV_test.Common
         /// </summary>
         private void InitializeComponent()
         {
-            this.label7 = new System.Windows.Forms.Label();
             this.comboBoxDDepth = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(-2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 12);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "ddepth";
             // 
             // comboBoxDDepth
             // 
             this.comboBoxDDepth.FormattingEnabled = true;
-            this.comboBoxDDepth.Location = new System.Drawing.Point(0, 15);
+            this.comboBoxDDepth.Location = new System.Drawing.Point(3, 18);
             this.comboBoxDDepth.Name = "comboBoxDDepth";
-            this.comboBoxDDepth.Size = new System.Drawing.Size(200, 20);
+            this.comboBoxDDepth.Size = new System.Drawing.Size(190, 20);
             this.comboBoxDDepth.TabIndex = 37;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.comboBoxDDepth);
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 45);
+            this.groupBox1.TabIndex = 39;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "ddepth";
             // 
             // DepthCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBoxDDepth);
+            this.Controls.Add(this.groupBox1);
             this.Name = "DepthCtrl";
-            this.Size = new System.Drawing.Size(201, 38);
+            this.Size = new System.Drawing.Size(200, 45);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBoxDDepth;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

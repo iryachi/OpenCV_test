@@ -12,7 +12,6 @@ namespace OpenCV_test
 {
     public partial class CvtColorCtrl : UserControl
     {
-        OpenCVFunc.CvtColor cvtColor = null;
         public CvtColorCtrl()
         {
             InitializeComponent();
@@ -20,6 +19,8 @@ namespace OpenCV_test
 
             KeyValuePair<int, string>[] kv = new KeyValuePair<int, string>[]
 {
+    new KeyValuePair<int, string>(7, "COLOR_RGB2GRAY"),
+    new KeyValuePair<int, string>(8, "COLOR_GRAY2RGB"),
 
     new KeyValuePair<int, string>(0, "COLOR_BGR2BGRA"),
     new KeyValuePair<int, string>(0, "COLOR_RGB2RGBA"),
@@ -34,9 +35,7 @@ namespace OpenCV_test
     new KeyValuePair<int, string>(5, "COLOR_BGRA2RGBA"),
     new KeyValuePair<int, string>(5, "COLOR_RGBA2BGRA"),
     new KeyValuePair<int, string>(6, "COLOR_BGR2GRAY"),
-    new KeyValuePair<int, string>(7, "COLOR_RGB2GRAY"),
     new KeyValuePair<int, string>(8, "COLOR_GRAY2BGR"),
-    new KeyValuePair<int, string>(8, "COLOR_GRAY2RGB"),
     new KeyValuePair<int, string>(9, "COLOR_GRAY2BGRA"),
     new KeyValuePair<int, string>(9, "COLOR_GRAY2RGBA"),
     new KeyValuePair<int, string>(10, "COLOR_BGRA2GRAY"),
@@ -218,8 +217,7 @@ namespace OpenCV_test
         {
             try
             {
-                if (cvtColor == null)
-                    cvtColor = new OpenCVFunc.CvtColor();
+                OpenCVFunc.CvtColor cvtColor = new OpenCVFunc.CvtColor();
 
                 int inputNo = imageInOutCtrl1.InNo;
                 int outputNo = imageInOutCtrl1.OutNo;

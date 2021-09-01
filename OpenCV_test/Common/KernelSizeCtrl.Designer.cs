@@ -29,43 +29,49 @@ namespace OpenCV_test.Common
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTitile = new System.Windows.Forms.Label();
             this.comboBoxKsize = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblTitile
-            // 
-            this.lblTitile.AutoSize = true;
-            this.lblTitile.Location = new System.Drawing.Point(-2, 0);
-            this.lblTitile.Name = "lblTitile";
-            this.lblTitile.Size = new System.Drawing.Size(31, 12);
-            this.lblTitile.TabIndex = 39;
-            this.lblTitile.Text = "ksize";
             // 
             // comboBoxKsize
             // 
+            this.comboBoxKsize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxKsize.FormattingEnabled = true;
-            this.comboBoxKsize.Location = new System.Drawing.Point(0, 15);
+            this.comboBoxKsize.Location = new System.Drawing.Point(3, 18);
+            this.comboBoxKsize.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxKsize.Name = "comboBoxKsize";
-            this.comboBoxKsize.Size = new System.Drawing.Size(58, 20);
+            this.comboBoxKsize.Size = new System.Drawing.Size(40, 20);
             this.comboBoxKsize.TabIndex = 38;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.comboBoxKsize);
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(50, 50);
+            this.groupBox1.TabIndex = 40;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "ksize";
             // 
             // KernelSizeCtrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lblTitile);
-            this.Controls.Add(this.comboBoxKsize);
+            this.Controls.Add(this.groupBox1);
             this.Name = "KernelSizeCtrl";
-            this.Size = new System.Drawing.Size(59, 38);
+            this.Size = new System.Drawing.Size(50, 50);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblTitile;
         private System.Windows.Forms.ComboBox comboBoxKsize;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

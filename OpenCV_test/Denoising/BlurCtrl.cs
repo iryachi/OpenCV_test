@@ -12,7 +12,6 @@ namespace OpenCV_test
 {
     public partial class BlurCtrl : UserControl
     {
-        private OpenCVFunc.Blur blur = null;
         public BlurCtrl()
         {
             InitializeComponent();
@@ -23,17 +22,18 @@ namespace OpenCV_test
         {
             try
             {
-                if (blur == null)
-                    blur = new OpenCVFunc.Blur();
+                OpenCVFunc.Blur blur = new OpenCVFunc.Blur();
 
                 int borderType = borderTypeCtrl1.BorderNo;
 
                 int inputNo = imageInOutCtrl1.InNo;
                 int outputNo = imageInOutCtrl1.OutNo;
 
+                roiCtrl1.SetRoi(blur);
+
                 string retStr = blur.Blur_exec(
-                    (int)numericUpDownKsizeX.Value, (int)numericUpDownKsizeY.Value,
-                     (int)numericUpDownAnchorX.Value, (int)numericUpDownAnchorY.Value,
+                    numXYCtrlKSize.X, numXYCtrlKSize.Y,
+                     numXYCtrlAnchor.X, numXYCtrlAnchor.Y,
                     borderType,
                     inputNo, outputNo);
 

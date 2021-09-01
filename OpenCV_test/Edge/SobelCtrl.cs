@@ -12,7 +12,6 @@ namespace OpenCV_test
 {
     public partial class SobelCtrl : UserControl
     {
-        OpenCVFunc.Sobel sobel = null;
         public SobelCtrl()
         {
             InitializeComponent();
@@ -23,14 +22,13 @@ namespace OpenCV_test
         {
             try
             {
-                if (sobel == null)
-                    sobel = new OpenCVFunc.Sobel();
+                OpenCVFunc.Sobel sobel = new OpenCVFunc.Sobel();
 
-                double scale = double.Parse(textBoxSacale.Text);
-                double delta = double.Parse(textBoxDelta.Text);
+                double scale = numberTextBoxScale.Data;
+                double delta = numberTextBoxDelta.Data;
 
-                int dx = (int)numericUpDownDx.Value;
-                int dy = (int)numericUpDownDy.Value;
+                int dx = numXYCtrl1.X;
+                int dy = numXYCtrl1.Y;
 
                 int ddepth = depthCtrl1.DepthNo;
                 int ksize = kernelSizeCtrl1.KernelSize;
@@ -39,6 +37,7 @@ namespace OpenCV_test
                 int inputNo = imageInOutCtrl1.InNo;
                 int outputNo = imageInOutCtrl1.OutNo;
 
+                roiCtrl1.SetRoi(sobel);
 
                 String retStr = sobel.Sobel_exec(ddepth, dx, dy, ksize, scale, delta, borderType, inputNo, outputNo);
                 textBoxParameter.Text = retStr;

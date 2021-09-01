@@ -137,6 +137,36 @@
     <Compile Include="Common\KernelSizeCtrl.Designer.cs">
       <DependentUpon>KernelSizeCtrl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\NumXYCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\NumXYCtrl.Designer.cs">
+      <DependentUpon>NumXYCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\RoiCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\RoiCtrl.Designer.cs">
+      <DependentUpon>RoiCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\RoiSettingCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\RoiSettingCtrl.Designer.cs">
+      <DependentUpon>RoiSettingCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\RoiSettingCtrlSub.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\RoiSettingCtrlSub.Designer.cs">
+      <DependentUpon>RoiSettingCtrlSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Converter\ConverterTabCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Converter\ConverterTabCtrl.Designer.cs">
+      <DependentUpon>ConverterTabCtrl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Denoising\BilateralFilterCtrl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,6 +191,12 @@
     <Compile Include="Denoising\BlurCtrl.Designer.cs">
       <DependentUpon>BlurCtrl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Denoising\DenoisingTabCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Denoising\DenoisingTabCtrl.Designer.cs">
+      <DependentUpon>DenoisingTabCtrl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Denoising\MedianBlurCtrl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -173,29 +209,17 @@
     <Compile Include="Edge\CannyCtrl.Designer.cs">
       <DependentUpon>CannyCtrl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Converter\ConverterTab.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Converter\ConverterTab.Designer.cs">
-      <DependentUpon>ConverterTab.cs</DependentUpon>
-    </Compile>
     <Compile Include="Converter\CvtColorCtrl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Converter\CvtColorCtrl.Designer.cs">
       <DependentUpon>CvtColorCtrl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Denoising\DenoisingTab.cs">
-      <SubType>Component</SubType>
+    <Compile Include="Edge\EdgeDitectTabCtrl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Denoising\DenoisingTab.Designer.cs">
-      <DependentUpon>DenoisingTab.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edge\EdgeDitectionTab.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Edge\EdgeDitectionTab.Designer.cs">
-      <DependentUpon>EdgeDitectionTab.cs</DependentUpon>
+    <Compile Include="Edge\EdgeDitectTabCtrl.Designer.cs">
+      <DependentUpon>EdgeDitectTabCtrl.cs</DependentUpon>
     </Compile>
     <Compile Include="Filter2DCtrl.cs">
       <SubType>UserControl</SubType>
@@ -208,12 +232,6 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="File\ImageFileTab.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="File\ImageFileTab.Designer.cs">
-      <DependentUpon>ImageFileTab.cs</DependentUpon>
     </Compile>
     <Compile Include="File\ImreadCtrl.cs">
       <SubType>UserControl</SubType>
@@ -238,6 +256,12 @@
     </Compile>
     <Compile Include="Denoising\GaussianBlurCtrl.Designer.cs">
       <DependentUpon>GaussianBlurCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NumberTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NumberTextBox.Designer.cs">
+      <DependentUpon>NumberTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -269,8 +293,23 @@
     <EmbeddedResource Include="Common\KernelSizeCtrl.resx">
       <DependentUpon>KernelSizeCtrl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Common\NumXYCtrl.resx">
+      <DependentUpon>NumXYCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\RoiCtrl.resx">
+      <DependentUpon>RoiCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\RoiSettingCtrl.resx">
+      <DependentUpon>RoiSettingCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\RoiSettingCtrlSub.resx">
+      <DependentUpon>RoiSettingCtrlSub.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Converter\BitDepthConverterCtrl.resx">
       <DependentUpon>BitDepthConverterCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Converter\ConverterTabCtrl.resx">
+      <DependentUpon>ConverterTabCtrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConvolutionTestCtrl.resx">
       <DependentUpon>ConvolutionTestCtrl.cs</DependentUpon>
@@ -281,6 +320,9 @@
     <EmbeddedResource Include="Denoising\BlurCtrl.resx">
       <DependentUpon>BlurCtrl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Denoising\DenoisingTabCtrl.resx">
+      <DependentUpon>DenoisingTabCtrl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Denoising\MedianBlurCtrl.resx">
       <DependentUpon>MedianBlurCtrl.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Converter\CvtColorCtrl.resx">
       <DependentUpon>CvtColorCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edge\EdgeDitectTabCtrl.resx">
+      <DependentUpon>EdgeDitectTabCtrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Filter2DCtrl.resx">
       <DependentUpon>Filter2DCtrl.cs</DependentUpon>
@@ -307,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Denoising\GaussianBlurCtrl.resx">
       <DependentUpon>GaussianBlurCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumberTextBox.resx">
+      <DependentUpon>NumberTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -338,12 +386,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OpenCVFunc\OpenCVFunc.vcxproj">
-      <Project>{2db9884a-ce18-4eb0-8744-e1c62b1383d0}</Project>
-      <Name>OpenCVFunc</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="LICENSE_BSD.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -363,6 +405,12 @@
   <ItemGroup>
     <Folder Include="OpenCV_dlls\x64\" />
     <Folder Include="OpenCV_dlls\x86\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenCVFunc\OpenCVFunc.vcxproj">
+      <Project>{2db9884a-ce18-4eb0-8744-e1c62b1383d0}</Project>
+      <Name>OpenCVFunc</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

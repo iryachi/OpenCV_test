@@ -12,7 +12,6 @@ namespace OpenCV_test
 {
     public partial class BilateralFilterCtrl : UserControl
     {
-        OpenCVFunc.BilateralFilter filter = null;
         public BilateralFilterCtrl()
         {
             InitializeComponent();
@@ -20,21 +19,29 @@ namespace OpenCV_test
 
         private void buttonExec_Click(object sender, EventArgs e)
         {
-            if (filter == null)
-                filter = new OpenCVFunc.BilateralFilter();
-
-            int d = int.Parse(textBoxD.Text);
-            double sigmaColor = double.Parse(textBoxSigmaColor.Text);
-            double sigmaSpace = double.Parse(textBoxSigmaSpace.Text);
-
-            int borderType = borderTypeCtrl1.BorderNo;
-
-            int inputNo = imageInOutCtrl1.InNo;
-            int outputNo = imageInOutCtrl1.OutNo;
+            OpenCVFunc.BilateralFilter filter = new OpenCVFunc.BilateralFilter();
 
 
-            String retStr = filter.Bilateral_exec(d, sigmaColor, sigmaSpace, borderType,inputNo, outputNo);
-            textBoxParameter.Text = retStr;
+            try
+            {
+                int d = (int)numberTextBoxD.Data;
+                double sigmaColor = numberTextBoxSigmaColor.Data;
+                double sigmaSpace = numberTextBoxSigmaSpace.Data;
+
+                int borderType = borderTypeCtrl1.BorderNo;
+
+                int inputNo = imageInOutCtrl1.InNo;
+                int outputNo = imageInOutCtrl1.OutNo;
+
+                roiCtrl1.SetRoi(filter);
+
+                String retStr = filter.Bilateral_exec(d, sigmaColor, sigmaSpace, borderType, inputNo, outputNo);
+                textBoxParameter.Text = retStr;
+            }
+            catch(Exception exp)
+            {
+                MessageBox.Show(exp.Message);
+            }
         }
     }
 }

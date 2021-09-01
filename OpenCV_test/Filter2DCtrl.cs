@@ -86,15 +86,17 @@ namespace OpenCV_test
                 if (filter2D == null)
                     filter2D = new OpenCVFunc.Filter2D();
 
+                roiCtrl1.SetRoi(filter2D);
+
                 int ddepth = depthCtrl1.DepthNo;
-                double delta = double.Parse(textBoxDelta.Text);
+                double delta = numberTextBoxDelta.Data;
                 int borderType = borderTypeCtrl1.BorderNo;
 
                 int inputNo = imageInOutCtrl1.InNo;
                 int outputNo = imageInOutCtrl1.OutNo;
 
-                int anchorX = (int)numericUpDownAnchorX.Value;
-                int anchorY = (int)numericUpDownAnchorY.Value;
+                int anchorX = numXYCtrl1.X;
+                int anchorY = numXYCtrl1.Y;
 
                 //プロジェクトでアンセーフコードを許可しておく
                 unsafe
